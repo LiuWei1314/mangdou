@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.p609915198.basemodule.widget.autolayout.AutoScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/y33"
+        android:paddingTop="@dimen/y40">
+
+        <LinearLayout
+            android:id="@+id/ll_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.p609915198.basemodule.widget.CircleImageView
+                android:id="@+id/civ_head"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="@dimen/x22"
+                android:src="@mipmap/ic_head" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/x16"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未登录"
+                        android:textColor="@color/text22"
+                        android:textSize="@dimen/text_size20" />
+
+                    <ImageView
+                        android:id="@+id/iv_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_toRightOf="@id/tv_name"
+                        android:src="@mipmap/ic_vip"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:layout_toRightOf="@id/iv_vip"
+                        android:src="@mipmap/ic_title"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y8"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_care"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text67"
+                        android:textSize="@dimen/text_size12"
+                        android:visibility="gone"
+                        tools:text="关注 152" />
+
+                    <TextView
+                        android:id="@+id/tv_fans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/x30"
+                        android:layout_toRightOf="@+id/tv_care"
+                        android:textColor="@color/text67"
+                        android:textSize="@dimen/text_size12"
+                        android:visibility="gone"
+                        tools:text="粉丝 152" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/x16"
+                android:src="@mipmap/ic_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y38"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/x10"
+            android:paddingRight="@dimen/x10">
+
+            <TextView
+                android:id="@+id/tv_history"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_click"
+                android:drawablePadding="12dp"
+                android:drawableTop="@mipmap/ic_history"
+                android:gravity="center_horizontal"
+                android:text="@string/history"
+                android:textColor="@color/text6d"
+                android:textSize="@dimen/text_size14" />
+
+            <TextView
+                android:id="@+id/tv_subscribe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_click"
+                android:drawablePadding="12dp"
+                android:drawableTop="@mipmap/ic_subscribe"
+                android:gravity="center_horizontal"
+                android:text="@string/subscribe"
+                android:textColor="@color/text6d"
+                android:textSize="@dimen/text_size14" />
+
+            <TextView
+                android:id="@+id/tv_download"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_click"
+                android:drawablePadding="12dp"
+                android:drawableTop="@mipmap/ic_mine_download"
+                android:gravity="center_horizontal"
+                android:text="@string/download"
+                android:textColor="@color/text6d"
+                android:textSize="@dimen/text_size14" />
+        </LinearLayout>
+
+        <!-- <TextView
+             android:id="@+id/tv_record"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/y50"
+             android:layout_marginLeft="@dimen/x20"
+             android:layout_marginRight="@dimen/x20"
+             android:layout_marginTop="@dimen/y29"
+             android:background="@drawable/shape_mine_text_view"
+             android:gravity="center"
+             android:text="开始录音"
+             android:textColor="@color/white"
+             android:textSize="@dimen/text_size18" />-->
+
+        <!--  <TextView
+              android:id="@+id/tv_1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/x18"
+              android:layout_marginRight="@dimen/x16"
+              android:layout_marginTop="@dimen/y33"
+              android:drawableLeft="@mipmap/ic_mine_img1"
+              android:drawablePadding="16dp"
+              android:drawableRight="@mipmap/ic_right"
+              android:gravity="center_vertical"
+              android:text="@string/mine_tv1"
+              android:textColor="@color/text33"
+              android:textSize="@dimen/text_size16" />-->
+
+        <!--  <TextView
+              android:id="@+id/tv_2"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="@dimen/x18"
+              android:layout_marginRight="@dimen/x16"
+              android:layout_marginTop="@dimen/y33"
+              android:drawableLeft="@mipmap/ic_mine_img2"
+              android:drawablePadding="16dp"
+              android:drawableRight="@mipmap/ic_right"
+              android:gravity="center_vertical"
+              android:text="@string/mine_tv2"
+              android:textColor="@color/text33"
+              android:textSize="@dimen/text_size16" />-->
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y20"
+            android:background="@drawable/selector_click"
+            android:drawableLeft="@mipmap/ic_mine_img3"
+            android:drawablePadding="16dp"
+            android:drawableRight="@mipmap/ic_right"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y15"
+            android:paddingLeft="@dimen/x18"
+            android:paddingRight="@dimen/x16"
+            android:paddingTop="@dimen/y15"
+            android:text="@string/mine_tv3"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size16" />
+
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_click"
+            android:drawableLeft="@mipmap/ic_mine_img4"
+            android:drawablePadding="16dp"
+            android:drawableRight="@mipmap/ic_right"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y15"
+            android:paddingLeft="@dimen/x18"
+            android:paddingRight="@dimen/x16"
+            android:paddingTop="@dimen/y15"
+            android:text="@string/mine_tv4"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size16" />
+
+        <TextView
+            android:id="@+id/tv_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_click"
+            android:drawableLeft="@mipmap/ic_mine_img5"
+            android:drawablePadding="16dp"
+            android:drawableRight="@mipmap/ic_right"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y15"
+            android:paddingLeft="@dimen/x18"
+            android:paddingRight="@dimen/x16"
+            android:paddingTop="@dimen/y15"
+            android:text="@string/mine_tv5"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size16" />
+
+        <!-- <TextView
+             android:id="@+id/tv_6"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/x18"
+             android:layout_marginRight="@dimen/x16"
+             android:layout_marginTop="@dimen/y33"
+             android:drawableLeft="@mipmap/ic_mine_img6"
+             android:drawablePadding="16dp"
+             android:drawableRight="@mipmap/ic_right"
+             android:gravity="center_vertical"
+             android:text="@string/mine_tv6"
+             android:textColor="@color/text33"
+             android:textSize="@dimen/text_size16" />-->
+
+        <TextView
+            android:id="@+id/tv_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_click"
+            android:drawableLeft="@mipmap/ic_mine_img7"
+            android:drawablePadding="16dp"
+            android:drawableRight="@mipmap/ic_right"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y15"
+            android:paddingLeft="@dimen/x18"
+            android:paddingRight="@dimen/x16"
+            android:paddingTop="@dimen/y15"
+            android:text="@string/mine_tv7"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size16" />
+
+        <TextView
+            android:id="@+id/tv_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_click"
+            android:drawableLeft="@mipmap/ic_mine_img8"
+            android:drawablePadding="16dp"
+            android:drawableRight="@mipmap/ic_right"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y15"
+            android:paddingLeft="@dimen/x18"
+            android:paddingRight="@dimen/x16"
+            android:paddingTop="@dimen/y15"
+            android:text="@string/mine_tv8"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size16" />
+
+        <TextView
+            android:id="@+id/tv_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_click"
+            android:drawableLeft="@mipmap/ic_mine_img9"
+            android:drawablePadding="16dp"
+            android:drawableRight="@mipmap/ic_right"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y15"
+            android:paddingLeft="@dimen/x18"
+            android:paddingRight="@dimen/x16"
+            android:paddingTop="@dimen/y15"
+            android:text="@string/mine_tv9"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size16" />
+    </LinearLayout>
+</com.p609915198.basemodule.widget.autolayout.AutoScrollView>

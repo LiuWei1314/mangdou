@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.p609915198.basemodule.widget.autolayout.AutoScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/x17"
+    android:paddingRight="@dimen/x17">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y14"
+            android:text="内容简介"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size14" />
+
+        <TextView
+            android:id="@+id/tv_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y17"
+            android:textColor="@color/text66"
+            android:textSize="@dimen/text_size14"
+            tools:text="内容简介内容简介内容简介内容简介内容简介" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y36"
+            android:text="主播介绍"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size14" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y20"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.p609915198.basemodule.widget.CircleImageView
+                android:id="@+id/civ_head"
+                android:layout_width="@dimen/x34"
+                android:layout_height="@dimen/y34"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/x14"
+                android:layout_toRightOf="@+id/civ_head"
+                android:textColor="@color/text33"
+                android:textSize="@dimen/text_size14"
+                tools:text="流氓" />
+
+            <TextView
+                android:id="@+id/tv_subscribe_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginLeft="@dimen/x14"
+                android:layout_marginTop="@dimen/y10"
+                android:layout_toRightOf="@+id/civ_head"
+                android:textColor="@color/text99"
+                android:textSize="@dimen/text_size10"
+                tools:text="被20万人关注" />
+
+            <TextView
+                android:id="@+id/tv_subscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="@dimen/x3"
+                android:drawableTop="@mipmap/ic_subcribe_room_detail"
+                android:gravity="center"
+                android:text="关注"
+                android:textColor="@color/main_text_selected"
+                android:textSize="@dimen/text_size10" />
+        </RelativeLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_introduce_2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/y18"-->
+        <!--android:textColor="@color/text66"-->
+        <!--android:textSize="@dimen/text_size14"-->
+        <!--tools:text="朴树声音日记之音乐赏析朴树声" />-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y36">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="听众点评"
+                android:textColor="@color/text33"
+                android:textSize="@dimen/text_size14" />
+
+            <TextView
+                android:id="@+id/tv_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/ic_common"
+                android:drawablePadding="@dimen/x3"
+                android:gravity="center_vertical"
+                android:text="发布评论"
+                android:textColor="@color/main_text_selected"
+                android:textSize="@dimen/text_size14" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</com.p609915198.basemodule.widget.autolayout.AutoScrollView>

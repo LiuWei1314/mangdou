@@ -1,0 +1,54 @@
+<resources>
+    <string name="main_home_page">主页</string>
+    <string name="main_listen">我听</string>
+    <string name="main_discover">发现</string>
+    <string name="main_mine">我的</string>
+
+    <string name="home_page_hot">热门</string>
+    <string name="home_page_classify">分类</string>
+    <string name="home_page_quality">精品</string>
+    <string name="home_page_anchor">主播</string>
+    <string name="home_page_radio">广播</string>
+
+    <string name="hot_recommended">推荐榜</string>
+    <string name="hot_free">免费榜</string>
+    <string name="hot_new">新品榜</string>
+    <string name="hot_peak">巅峰称号</string>
+    <string name="download">下载</string>
+    <string name="history">历史</string>
+    <string name="buy">已购</string>
+    <string name="subscribe">订阅</string>
+
+    <string name="mine_tv1">主播工作台</string>
+    <string name="mine_tv2">我的作品</string>
+    <string name="mine_tv3">我的称号</string>
+    <string name="mine_tv4">我的已购</string>
+    <string name="mine_tv5">我的钱包</string>
+    <string name="mine_tv6">分享赚钱</string>
+    <string name="mine_tv7">联系客服</string>
+    <string name="mine_tv8">帮助与反馈</string>
+    <string name="mine_tv9">通用设置</string>
+
+    <string name="pay">
+        充值说明
+        \n1.苹果公司规定，安卓平台内充值的喜点不可应用于苹果设备
+        \n2.忙豆充值成功后无法退款，不可提现
+        \n3.如存在无法充值、充值失败等问题，可以关注“忙豆听书”微信公众号，一站式解决您的问题
+    </string>
+
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="logout">退出后，将无法收听已购节目，无法接收订阅更新</string>
+    <string name="other_way_login">————————————  其他方式登录  ————————————</string>
+    <string name="wechat_login">微信登录</string>
+    <string name="register_hint">为了安全，我们会向你的手机发送验证码</string>
+    <string name="register">注册</string>
+    <string name="send_msg">发送验证码</string>
+    <string name="agree">本人已阅读并同意</string>
+    <string name="register_protocol">注册协议</string>
+    <string name="next_step">下一步</string>
+    <string name="finish">完成</string>
+    <string name="submit">提交</string>
+    <string name="confirm_charge">确认充值</string>
+    <string name="search">搜索</string>
+</resources>

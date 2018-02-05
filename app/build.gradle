@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    defaultConfig {
+        applicationId "com.p609915198.fwb"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.dependencies["androidJUnitRunner"]
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(System.properties['debugStoreFile'])
+            storePassword System.properties['debugStorePassword']
+            keyAlias System.properties['debugKeyAlias']
+            keyPassword System.properties['debugKeyPassword']
+        }
+    }
+
+    buildTypes {
+        debug {
+            // debug log 打印配置
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            // debug log 打印配置
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        //打包重命名
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "忙豆听书_${defaultConfig.versionName}_${releaseTime()}.apk"
+            }
+        }
+    }
+}
+
+//获取时间
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    // 广告轮播
+    implementation 'com.bigkoo:convenientbanner:2.0.5'
+    // 进度条
+    implementation 'com.liulishuo.magicprogresswidget:library:1.0.9'
+    // 支付
+//    implementation 'com.pingxx:pingpp-core:2.1.16'
+//    implementation 'com.pingxx:pingpp-wxpay:2.1.16'
+//    implementation 'com.pingxx:pingpp-alipay:2.1.16'
+
+    implementation 'me.shaohui:bottomdialog:1.1.9'
+    // 分享
+//    implementation('me.shaohui.shareutil:shareutil:1.3.8') { exclude module: 'rxjava' }
+
+    // 微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+    implementation rootProject.ext.dependencies["baseAdapter"]
+    implementation rootProject.ext.dependencies["glide"]
+    implementation rootProject.ext.dependencies["rxpermissions2"]
+    testImplementation rootProject.ext.dependencies["junit"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    annotationProcessor(rootProject.ext.dependencies["dagger2-compiler"])
+    api project(':basemodule')
+}

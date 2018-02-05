@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/y17"
+    android:drawablePadding="8dp"
+    android:drawableTop="@mipmap/ic_book"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:text="音乐"
+    android:textColor="@color/text33"
+    android:textSize="@dimen/text_size14" />

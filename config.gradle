@@ -1,0 +1,75 @@
+ext {
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.0.2",
+            minSdkVersion    : 14,
+            targetSdkVersion : 26,
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+
+    version = [
+            androidSupportSdkVersion: "25.3.1",
+            dagger2SdkVersion       : "2.11",
+            butterknifeSdkVersion   : "8.8.1",
+            retrofitSdkVersion      : "2.3.0",
+            rxlifecycle2SdkVersion  : "2.0.1",
+            kotlinVersion           : "1.1.4-2",
+    ]
+
+    dependencies = [
+            //support
+            "appcompat-v7"            : "com.android.support:appcompat-v7:${version["androidSupportSdkVersion"]}",
+            "design"                  : "com.android.support:design:${version["androidSupportSdkVersion"]}",
+            "support-v4"              : "com.android.support:support-v4:${version["androidSupportSdkVersion"]}",
+            "annotations"             : "com.android.support:support-annotations:${version["androidSupportSdkVersion"]}",
+            "recyclerview-v7"         : "com.android.support:recyclerview-v7:${version["androidSupportSdkVersion"]}",
+            "multidex"                : "com.android.support:multidex:1.0.1",
+
+            //view
+            "autolayout"              : "com.zhy:autolayout:1.4.5",
+            "baseAdapter"             : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30",
+            "butterknife"             : "com.jakewharton:butterknife:${version["butterknifeSdkVersion"]}",
+            "butterknife-compiler"    : "com.jakewharton:butterknife-compiler:${version["butterknifeSdkVersion"]}",
+            "twowayview"              : "org.lucasr.twowayview:twowayview:0.1.4",
+
+            //rx
+            "rxjava2"                 : "io.reactivex.rxjava2:rxjava:2.1.2",
+            "rxandroid2"              : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            "rxbinding2"              : "com.jakewharton.rxbinding2:rxbinding:2.0.0",
+            "rxlifecycle2"            : "com.trello.rxlifecycle2:rxlifecycle:${version["rxlifecycle2SdkVersion"]}",
+            "rxlifecycle2-components" : "com.trello.rxlifecycle2:rxlifecycle-components:${version["rxlifecycle2SdkVersion"]}",
+            "rxpermissions2"          : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar",
+            "rxprefrences2"           : "com.f2prateek.rx.preferences2:rx-preferences:2.0.0-RC3",
+            "rxkotlin2"               : "io.reactivex.rxjava2:rxkotlin:2.1.0",
+
+            //tools
+            "dagger2"                 : "com.google.dagger:dagger:${version["dagger2SdkVersion"]}",
+            "dagger2-compiler"        : "com.google.dagger:dagger-compiler:${version["dagger2SdkVersion"]}",
+            "eventbus"                : "org.greenrobot:eventbus:3.0.0",
+            "fastjson-android"        : "com.alibaba:fastjson:1.1.64.android",
+            "convert-fastjson-android": "org.ligboy.retrofit2:converter-fastjson-android:2.1.0",
+            "logging-interceptor"     : "com.squareup.okhttp3:logging-interceptor:3.9.0",
+            "greendao"                : "org.greenrobot:greendao:3.2.2",
+            "greenDaoUpgradeHelper"   : "com.github.yuweiguocn:GreenDaoUpgradeHelper:v1.3.0",
+            "glide"                   : "com.github.bumptech.glide:glide:4.1.1",
+            "glide-compiler"          : "com.github.bumptech.glide:compiler:4.1.1",
+            "stetho"                  : "com.facebook.stetho:stetho:1.5.0",
+            "stetho-okhttp"           : "com.facebook.stetho:stetho-okhttp3:1.5.0",
+            "leakcanary-debug"        : "com.squareup.leakcanary:leakcanary-android:1.5.2",
+            "leakcanary-release"      : "com.squareup.leakcanary:leakcanary-android-no-op:1.5.2",
+            "kotlin"                  : "org.jetbrains.kotlin:kotlin-stdlib-jre7:${version["kotlinVersion"]}",
+            "utils"                   : "com.blankj:utilcode:1.9.1",
+            "okhttp-utils"            : "com.zhy:okhttputils:2.6.2",
+
+            //test
+            "junit"                   : "junit:junit:4.12",
+            "androidJUnitRunner"      : "android.support.test.runner.AndroidJUnitRunner",
+            "runner"                  : "com.android.support.test:runner:0.5",
+            "mockito"                 : "org.mockito:mockito-core:2.8.47",
+
+            //net
+            "retrofit"                : "com.squareup.retrofit2:retrofit:${version["retrofitSdkVersion"]}",
+            "retrofit-adapter-rxjava2": "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitSdkVersion"]}",
+    ]
+}

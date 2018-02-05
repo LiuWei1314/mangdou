@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="头像"
+            android:textColor="@color/text03"
+            android:textSize="@dimen/text_size16" />
+
+        <ImageView
+            android:id="@+id/iv_heard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="昵称"
+            android:textColor="@color/text03"
+            android:textSize="@dimen/text_size16" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="@dimen/x200"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:maxLines="1"
+            android:maxWidth="@dimen/x200" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="简介"
+            android:textColor="@color/text03"
+            android:textSize="@dimen/text_size16" />
+
+        <EditText
+            android:id="@+id/et_introduce"
+            android:layout_width="@dimen/x200"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:maxLines="1"
+            android:maxWidth="@dimen/x200" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="性别"
+            android:textColor="@color/text03"
+            android:textSize="@dimen/text_size16" />
+
+        <EditText
+            android:id="@+id/et_sex"
+            android:layout_width="@dimen/x200"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:maxLines="1"
+            android:maxWidth="@dimen/x200" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="生日"
+            android:textColor="@color/text03"
+            android:textSize="@dimen/text_size16" />
+
+        <EditText
+            android:id="@+id/et_birthday"
+            android:layout_width="@dimen/x200"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:maxLines="1"
+            android:maxWidth="@dimen/x200" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/x20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="地址"
+            android:textColor="@color/text03"
+            android:textSize="@dimen/text_size16" />
+
+        <EditText
+            android:id="@+id/et_place"
+            android:layout_width="@dimen/x200"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:maxLines="1"
+            android:maxWidth="@dimen/x200" />
+    </RelativeLayout>
+</LinearLayout>

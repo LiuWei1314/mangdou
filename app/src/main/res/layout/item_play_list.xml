@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_click"
+    android:padding="@dimen/x17">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/text33"
+        android:textSize="@dimen/text_size16"
+        tools:text="第一集" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_listen_try"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/x20"-->
+    <!--android:background="@drawable/shape_listent_try"-->
+    <!--android:paddingBottom="@dimen/y3"-->
+    <!--android:paddingLeft="@dimen/x10"-->
+    <!--android:paddingRight="@dimen/x10"-->
+    <!--android:paddingTop="@dimen/y3"-->
+    <!--android:text="可试听"-->
+    <!--android:textColor="@color/main_text_selected"-->
+    <!--android:textSize="@dimen/text_size12" />-->
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x20"
+        android:layout_toRightOf="@+id/tv_title"
+        android:textColor="@color/text99"
+        android:textSize="@dimen/text_size12"
+        tools:text="12:39" />
+
+    <ImageView
+        android:id="@+id/iv_download"
+        android:layout_width="@dimen/x20"
+        android:layout_height="@dimen/y20"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_group" />
+</RelativeLayout>

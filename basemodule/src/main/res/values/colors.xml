@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="whiteF5">#F5F5F5</color>
+    <color name="whiteFA">#FAFAFA</color>
+    <color name="lineD7">#D7D7D7</color>
+    <color name="lineDD">#DDDDDD</color>
+    <color name="text22">#222222</color>
+    <color name="text33">#ff333333</color>
+    <color name="text45">#ff454545</color>
+    <color name="text4A">#4A4A4A</color>
+    <color name="text63">#ff636363</color>
+    <color name="text6d">#6d6d6d</color>
+    <color name="text66">#666666</color>
+    <color name="text67">#676767</color>
+    <color name="text95">#959595</color>
+    <color name="text99">#ff999999</color>
+    <color name="textC7">#C7C7C7</color>
+    <color name="text7F">#7F7F7F</color>
+    <color name="textCC">#CCCCCC</color>
+    <color name="text03">#030303</color>
+    <color name="textFF">#FFFFFF</color>
+    <color name="line">#E5E8ED</color>
+    <color name="main_color">#FF5630</color>
+</resources>

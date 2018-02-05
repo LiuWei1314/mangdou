@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/y20"
+    android:layout_marginTop="@dimen/y20"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/x14"
+    android:paddingRight="@dimen/x14">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="@dimen/x58"
+            android:layout_height="@dimen/y58" />
+
+        <TextView
+            android:id="@+id/tv_menu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x14"
+            android:layout_toRightOf="@+id/iv_img"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size16"
+            tools:text="啦拉" />
+
+        <TextView
+            android:id="@+id/tv_menu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_menu1"
+            android:layout_marginBottom="@dimen/y4"
+            android:layout_marginLeft="@dimen/x14"
+            android:layout_marginTop="@dimen/y4"
+            android:layout_toRightOf="@+id/iv_img"
+            android:textColor="@color/text99"
+            android:textSize="@dimen/text_size12"
+            tools:text="啦拉" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y16">
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="@dimen/x64"
+            android:layout_height="@dimen/y24"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_toLeftOf="@+id/tv_comments"
+            android:background="@drawable/shape_item_already_buy_share"
+            android:gravity="center"
+            android:text="分享"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/text_size12" />
+
+        <TextView
+            android:id="@+id/tv_comments"
+            android:layout_width="@dimen/x64"
+            android:layout_height="@dimen/y24"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_item_already_buy_comments"
+            android:gravity="center"
+            android:text="评论"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size12" />
+    </RelativeLayout>
+</LinearLayout>

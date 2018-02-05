@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginTop="@dimen/y11"
+        android:textColor="@color/text33"
+        android:textSize="@dimen/text_size16"
+        tools:text="你的手机号：181131123135" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginTop="@dimen/y20"
+        android:text="请输入接收到的短信验证："
+        android:textColor="@color/text99"
+        android:textSize="@dimen/text_size12" />
+
+    <EditText
+        android:id="@+id/et_msg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y50"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginTop="@dimen/y10"
+        android:background="@drawable/shape_user_name"
+        android:hint="请输入验证码"
+        android:inputType="number"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/x12"
+        android:textColor="@color/text66"
+        android:textSize="@dimen/text_size14" />
+
+    <Button
+        android:id="@+id/bt_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y40"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:layout_marginTop="@dimen/y20"
+        android:background="@drawable/shape_item_already_buy_comments"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size18" />
+</LinearLayout>

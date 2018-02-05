@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/y20"
+    android:paddingTop="@dimen/y20">
+
+    <com.p609915198.basemodule.widget.CircleImageView
+        android:id="@+id/civ_head"
+        android:layout_width="@dimen/x34"
+        android:layout_height="@dimen/y34"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x20" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x14"
+        android:layout_toRightOf="@+id/civ_head"
+        android:textColor="@color/text33"
+        android:textSize="@dimen/text_size14"
+        tools:text="流氓" />
+
+    <TextView
+        android:id="@+id/tv_subscribe_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginLeft="@dimen/x14"
+        android:layout_marginTop="@dimen/y10"
+        android:layout_toRightOf="@+id/civ_head"
+        android:textColor="@color/text99"
+        android:textSize="@dimen/text_size10"
+        tools:text="被20万人关注" />
+
+    <TextView
+        android:id="@+id/tv_subscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x20"
+        android:drawablePadding="@dimen/x3"
+        android:drawableTop="@mipmap/ic_subcribe_room_detail"
+        android:gravity="center"
+        android:text="关注"
+        android:textColor="@color/main_text_selected"
+        android:textSize="@dimen/text_size10"
+        android:visibility="gone" />
+</RelativeLayout>

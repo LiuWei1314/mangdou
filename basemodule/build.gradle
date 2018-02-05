@@ -1,0 +1,70 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // support
+    api rootProject.ext.dependencies["annotations"]
+    api(rootProject.ext.dependencies["support-v4"]) { exclude module: 'support-annotations' }
+    api(rootProject.ext.dependencies["appcompat-v7"]) { exclude module: 'support-v4' }
+    api(rootProject.ext.dependencies["design"]) {
+        exclude module: 'support-annotations' exclude module: 'appcompat-v7' exclude module: 'support-v4'
+    }
+
+    // rx
+    api rootProject.ext.dependencies["rxjava2"]
+    api(rootProject.ext.dependencies["rxandroid2"]) { exclude module: 'rxjava' }
+    api(rootProject.ext.dependencies["rxlifecycle2"]) {
+        exclude module: 'rxjava' exclude module: 'jsr305'
+    }
+    api(rootProject.ext.dependencies["rxlifecycle2-components"]) {
+        exclude module: 'support-v4' exclude module: 'appcompat-v7' exclude module: 'support-annotations'
+        exclude module: 'rxjava' exclude module: 'rxandroid' exclude module: 'rxlifecycle'
+    }
+    api(rootProject.ext.dependencies["rxbinding2"]) { exclude module: 'rxjava' }
+
+    // retrofit
+    api(rootProject.ext.dependencies["retrofit"])
+    api(rootProject.ext.dependencies["retrofit-adapter-rxjava2"]) {
+        exclude module: 'rxjava' exclude module: 'okhttp' exclude module: 'retrofit'
+    }
+
+    // dagger2
+    api rootProject.ext.dependencies["dagger2"]
+    annotationProcessor(rootProject.ext.dependencies["dagger2-compiler"])
+
+    // butterknife
+    api(rootProject.ext.dependencies["butterknife"]) { exclude module: 'support-annotations' }
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
+    api(rootProject.ext.dependencies["autolayout"]) { exclude group: 'com.android.support' }
+    api rootProject.ext.dependencies["eventbus"]
+    api rootProject.ext.dependencies["okhttp-utils"]
+    api rootProject.ext.dependencies["fastjson-android"]
+    api rootProject.ext.dependencies["utils"]
+    api rootProject.ext.dependencies["baseAdapter"]
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation rootProject.ext.dependencies["convert-fastjson-android"]
+    testImplementation rootProject.ext.dependencies["junit"]
+}

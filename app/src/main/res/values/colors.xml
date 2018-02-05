@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_text_selected">#FF5630</color>
+    <color name="main_text">#A4AAB3</color>
+    <color name="line_">#E5E8ED</color>
+    <color name="home_page_edit_text_bg">#F3F4F5</color>
+    <color name="main_color">#FF5832</color>
+</resources>

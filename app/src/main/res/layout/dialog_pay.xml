@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y22">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/confirm_charge"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size18" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x22"
+            android:src="@mipmap/ic_close_pay_dialog" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_marginTop="@dimen/y18"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y25"
+        android:text="￥18元"
+        android:textColor="@color/main_text_selected"
+        android:textSize="@dimen/text_size40" />
+
+    <TextView
+        android:id="@+id/tv_bean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y6"
+        android:text="18忙豆"
+        android:textColor="@color/text66"
+        android:textSize="@dimen/text_size18" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_marginLeft="@dimen/x14"
+        android:layout_marginRight="@dimen/x14"
+        android:layout_marginTop="@dimen/y20"
+        android:background="@color/line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x14"
+        android:layout_marginTop="@dimen/y12"
+        android:text="请选择充值方式"
+        android:textColor="@color/text66"
+        android:textSize="@dimen/text_size12" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y14"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_ali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x15"
+            android:src="@mipmap/ic_ali_pay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x21"
+            android:layout_toRightOf="@+id/iv_ali"
+            android:text="支付宝支付"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size18" />
+
+        <ImageView
+            android:id="@+id/iv_ali_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            android:src="@mipmap/ic_checked_pay" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y24"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_wx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x15"
+            android:src="@mipmap/ic_wx_pay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x21"
+            android:layout_toRightOf="@+id/iv_wx"
+            android:text="微信支付"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size18" />
+
+        <ImageView
+            android:id="@+id/iv_wx_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x20"
+            android:src="@mipmap/ic_normal_pay" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y37"
+        android:text="充值1RMB兑换1忙豆，充值后不可提现，感谢支持！"
+        android:textColor="@color/main_text_selected"
+        android:textSize="@dimen/text_size12" />
+
+    <Button
+        android:id="@+id/bt_pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y40"
+        android:layout_marginBottom="@dimen/y26"
+        android:layout_marginLeft="@dimen/x14"
+        android:layout_marginRight="@dimen/x14"
+        android:layout_marginTop="@dimen/y10"
+        android:background="@drawable/shape_item_already_buy_comments"
+        android:text="立即支付"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size16" />
+</com.zhy.autolayout.AutoLinearLayout>
