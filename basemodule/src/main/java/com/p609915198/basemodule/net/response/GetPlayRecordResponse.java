@@ -29,7 +29,7 @@ public class GetPlayRecordResponse {
     private String room_name;
     private String last_update;
     private String user_name;
-    private List<PlayRecordBean> play_record;
+    private List<Audio> play_record;
 
     public String getRoom_id() { return room_id;}
 
@@ -67,85 +67,11 @@ public class GetPlayRecordResponse {
 
     public void setUser_name(String user_name) { this.user_name = user_name;}
 
-    public List<PlayRecordBean> getPlay_record() { return play_record;}
+    public List<Audio> getPlay_record() {
+        return play_record;
+    }
 
-    public void setPlay_record(List<PlayRecordBean> play_record) { this.play_record = play_record;}
-
-    public static class PlayRecordBean {
-        /**
-         * datetime : 2017-04-29 01:13:21
-         * audio_id : 235
-         * sort : 217
-         * audio_set : 185
-         * audio_name : 黄金瞳成品第185集.mp3
-         * audio_sum : null
-         * audio_path : 20170114/11224038kyprfm.mp3
-         * filesize : 8.81M
-         * audio_length : 00:19:14
-         * audio_free : 0
-         * price : 0.19
-         * is_buy : 1
-         */
-
-        private String datetime;
-        private String audio_id;
-        private String sort;
-        private String audio_set;
-        private String audio_name;
-        private Object audio_sum;
-        private String audio_path;
-        private String filesize;
-        private String audio_length;
-        private String audio_free;
-        private String price;
-        private int is_buy;
-
-        public String getDatetime() { return datetime;}
-
-        public void setDatetime(String datetime) { this.datetime = datetime;}
-
-        public String getAudio_id() { return audio_id;}
-
-        public void setAudio_id(String audio_id) { this.audio_id = audio_id;}
-
-        public String getSort() { return sort;}
-
-        public void setSort(String sort) { this.sort = sort;}
-
-        public String getAudio_set() { return audio_set;}
-
-        public void setAudio_set(String audio_set) { this.audio_set = audio_set;}
-
-        public String getAudio_name() { return audio_name;}
-
-        public void setAudio_name(String audio_name) { this.audio_name = audio_name;}
-
-        public Object getAudio_sum() { return audio_sum;}
-
-        public void setAudio_sum(Object audio_sum) { this.audio_sum = audio_sum;}
-
-        public String getAudio_path() { return audio_path;}
-
-        public void setAudio_path(String audio_path) { this.audio_path = audio_path;}
-
-        public String getFilesize() { return filesize;}
-
-        public void setFilesize(String filesize) { this.filesize = filesize;}
-
-        public String getAudio_length() { return audio_length;}
-
-        public void setAudio_length(String audio_length) { this.audio_length = audio_length;}
-
-        public String getAudio_free() { return audio_free;}
-
-        public void setAudio_free(String audio_free) { this.audio_free = audio_free;}
-
-        public String getPrice() { return price;}
-
-        public void setPrice(String price) { this.price = price;}
-
-        public int getIs_buy() { return is_buy;}
-
-        public void setIs_buy(int is_buy) { this.is_buy = is_buy;}
+    public void setPlay_record(List<Audio> play_record) {
+        this.play_record = play_record;
     }
 }
