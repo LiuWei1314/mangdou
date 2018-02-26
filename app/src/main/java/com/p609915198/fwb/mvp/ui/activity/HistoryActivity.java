@@ -34,7 +34,7 @@ public class HistoryActivity extends BaseActivity<HistoryPresenter> implements H
         DaggerHistoryComponent
                 .builder()
                 .baseComponent(baseComponent)
-                .HistoryModule(new HistoryModule(this)) //请将HistoryModule()第一个首字母改为小写
+                .historyModule(new HistoryModule(this)) //请将HistoryModule()第一个首字母改为小写
                 .build()
                 .inject(this);
     }

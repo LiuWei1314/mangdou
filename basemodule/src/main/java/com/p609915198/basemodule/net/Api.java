@@ -126,7 +126,7 @@ public class Api {
 
     public Observable myAward(MyAwardRequest request) { return mApiService.myAward(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
-    public Observable mySubscribe(MySubscribeRequest request) { return mApiService.mySubscribe(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
+    public Observable mySubscribe(String userId) { return mApiService.mySubscribe(userId).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
     public Observable myGift(MyGiftRequest request) { return mApiService.myGift(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 

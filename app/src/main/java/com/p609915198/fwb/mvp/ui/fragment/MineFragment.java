@@ -24,6 +24,8 @@ import com.p609915198.fwb.mvp.presenter.MinePresenter;
 import com.p609915198.fwb.mvp.ui.activity.GeneralSettingsActivity;
 import com.p609915198.fwb.mvp.ui.activity.HistoryActivity;
 import com.p609915198.fwb.mvp.ui.activity.LoginActivity;
+import com.p609915198.fwb.mvp.ui.activity.MyDownloadActivity;
+import com.p609915198.fwb.mvp.ui.activity.MySubscribeActivity;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -47,8 +49,6 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
     @BindView(R.id.tv_3) TextView mTv3;
     @BindView(R.id.tv_4) TextView mTv4;
     @BindView(R.id.tv_5) TextView mTv5;
-    @BindView(R.id.tv_7) TextView mTv7;
-    @BindView(R.id.tv_8) TextView mTv8;
     @BindView(R.id.tv_9) TextView mTv9;
 
     public static MineFragment newInstance() {
@@ -90,7 +90,26 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
         }
     }
 
-    @OnClick({R.id.tv_3, R.id.tv_4, R.id.tv_5, R.id.tv_7, R.id.tv_8, R.id.tv_history})
+    @OnClick({R.id.tv_subscribe})
+    public void mySubscribe(View view) {
+        if (!AppConfig.isLogin()) {
+            showToast("请先登录！");
+            return;
+        }
+        switch (view.getId()) {
+            case R.id.tv_subscribe:
+                launchActivity(new Intent(mActivity, MySubscribeActivity.class));
+                break;
+            case R.id.tv_history:
+                launchActivity(new Intent(mActivity, HistoryActivity.class));
+                break;
+            case R.id.tv_download:
+                launchActivity(new Intent(mActivity, MyDownloadActivity.class));
+                break;
+        }
+    }
+
+    @OnClick({R.id.tv_3, R.id.tv_4, R.id.tv_5, R.id.tv_history})
     public void onViewClicked(View view) {
         if (!AppConfig.isLogin()) {
             showToast("请先登录！");
@@ -102,13 +121,6 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
             case R.id.tv_4:
                 break;
             case R.id.tv_5:
-                break;
-            case R.id.tv_7:
-                break;
-            case R.id.tv_8:
-                break;
-            case R.id.tv_history:
-                launchActivity(new Intent(mActivity, HistoryActivity.class));
                 break;
         }
     }

@@ -20,7 +20,6 @@ import com.p609915198.basemodule.net.request.MyGiftRequest;
 import com.p609915198.basemodule.net.request.MyReceiveAwardRequest;
 import com.p609915198.basemodule.net.request.MyReceiveGiftRequest;
 import com.p609915198.basemodule.net.request.MyRoomsRequest;
-import com.p609915198.basemodule.net.request.MySubscribeRequest;
 import com.p609915198.basemodule.net.request.PagerOneRequest;
 import com.p609915198.basemodule.net.request.PostReplyRequest;
 import com.p609915198.basemodule.net.request.PublishAudioRequest;
@@ -248,7 +247,7 @@ public interface ApiService {
     Observable<HttpResult<List<MyAwardResponse>>> myAward(@Body MyAwardRequest request);
 
     @POST(MY_SUBSCRIBE)
-    Observable<HttpResult<List<MySubscribeResponse>>> mySubscribe(@Body MySubscribeRequest request);
+    Observable<HttpResult<List<MySubscribeResponse>>> mySubscribe(@Query("user_id") String userId);
 
     @POST(MY_GIFT)
     Observable<HttpResult<List<MyGiftResponse>>> myGift(@Body MyGiftRequest request);

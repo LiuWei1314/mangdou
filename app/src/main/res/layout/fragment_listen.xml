@@ -47,6 +47,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/ll_download_size"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -75,6 +76,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_history_size"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -103,6 +105,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_buy_size"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

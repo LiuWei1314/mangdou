@@ -1,7 +1,9 @@
 package com.p609915198.fwb.mvp.ui.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.TextView;
 
 import com.p609915198.basemodule.base.BaseFragment;
@@ -11,8 +13,11 @@ import com.p609915198.fwb.mvp.contract.ListenContract;
 import com.p609915198.fwb.mvp.di.component.DaggerListenComponent;
 import com.p609915198.fwb.mvp.di.module.ListenModule;
 import com.p609915198.fwb.mvp.presenter.ListenPresenter;
+import com.p609915198.fwb.mvp.ui.activity.HistoryActivity;
+import com.p609915198.fwb.mvp.ui.activity.MyDownloadActivity;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * Created by mark.liu on 2017-9-12.
@@ -49,5 +54,20 @@ public class ListenFragment extends BaseFragment<ListenPresenter> implements Lis
     @Override
     protected void initData() {
 
+    }
+
+    @OnClick({R.id.ll_download_size, R.id.ll_history_size, R.id.ll_buy_size})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.ll_download_size:
+                launchActivity(new Intent(mActivity, MyDownloadActivity.class));
+                break;
+            case R.id.ll_history_size:
+                launchActivity(new Intent(mActivity, HistoryActivity.class));
+                break;
+            case R.id.ll_buy_size:
+                launchActivity(new Intent(mActivity, MyDownloadActivity.class));
+                break;
+        }
     }
 }

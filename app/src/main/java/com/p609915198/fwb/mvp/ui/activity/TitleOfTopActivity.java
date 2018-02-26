@@ -13,6 +13,7 @@ import com.p609915198.basemodule.di.component.BaseComponent;
 import com.p609915198.basemodule.net.response.TopResponse;
 import com.p609915198.basemodule.widget.CircleImageView;
 import com.p609915198.fwb.R;
+import com.p609915198.fwb.app.AppConfig;
 import com.p609915198.fwb.mvp.contract.TitleOfTopContract;
 import com.p609915198.fwb.mvp.di.component.DaggerTitleOfTopComponent;
 import com.p609915198.fwb.mvp.di.module.TitleOfTopModule;
@@ -58,8 +59,7 @@ public class TitleOfTopActivity extends BaseActivity<TitleOfTopPresenter> implem
         mTvCenter.setText("巅峰称号");
         mTvCenter.setVisibility(View.VISIBLE);
 
-        // todo userId
-        mPresenter.getData("24258");
+        mPresenter.getData(AppConfig.getUserId());
     }
 
     @OnClick({R.id.tv_left, R.id.bt_recharge})

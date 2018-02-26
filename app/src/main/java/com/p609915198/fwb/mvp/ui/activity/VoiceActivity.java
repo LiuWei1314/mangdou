@@ -1,12 +1,9 @@
 package com.p609915198.fwb.mvp.ui.activity;
 
-import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.blankj.utilcode.util.ActivityUtils;
 import com.p609915198.basemodule.base.BaseActivity;
 import com.p609915198.basemodule.di.component.BaseComponent;
 import com.p609915198.fwb.R;
@@ -49,15 +46,5 @@ public class VoiceActivity extends BaseActivity<VoicePresenter> implements Voice
     protected void initData() {
         mTvLeft.setText("有声书");
         mTvLeft.setOnClickListener(v -> killMyself());
-    }
-
-    @Override
-    public void launchActivity(@NonNull Intent intent) {
-        ActivityUtils.startActivity(this, intent);
-    }
-
-    @Override
-    public void killMyself() {
-        ActivityUtils.finishActivity(this);
     }
 }

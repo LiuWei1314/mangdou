@@ -1,8 +1,8 @@
 package com.p609915198.fwb.mvp.presenter;
 
+import android.app.Activity;
 import android.content.Intent;
 
-import com.p609915198.basemodule.base.BaseFragment;
 import com.p609915198.basemodule.base.BasePresenter;
 import com.p609915198.basemodule.di.scope.ActivityScope;
 import com.p609915198.basemodule.net.Api;
@@ -48,7 +48,7 @@ public class HistoryPresenter extends BasePresenter<HistoryContract.Model, Histo
                                 GetPlayRecordResponse recordResponse = (GetPlayRecordResponse) adapter.getData().get(position);
                                 String roomId = recordResponse.getRoom_id();
                                 List<Audio> audios = recordResponse.getPlay_record();
-                                Intent intent = new Intent(((BaseFragment) mRootView).getActivity(), PlayActivity.class);
+                                Intent intent = new Intent((Activity) mRootView, PlayActivity.class);
                                 intent.putExtra("roomId", roomId);
                                 intent.putExtra("audioList", (ArrayList) audios);
                                 intent.putExtra("audio", audios.get(position));
@@ -65,7 +65,7 @@ public class HistoryPresenter extends BasePresenter<HistoryContract.Model, Histo
                             });
                             mRootView.setAdapter(mHistoryAdapter);
                         }
-                    }, ((BaseFragment) mRootView).getActivity())
+                    }, (Activity) mRootView)
             );
     }
 }

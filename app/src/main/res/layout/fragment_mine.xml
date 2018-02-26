@@ -261,7 +261,7 @@
              android:textColor="@color/text33"
              android:textSize="@dimen/text_size16" />-->
 
-        <TextView
+     <!--   <TextView
             android:id="@+id/tv_7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -276,9 +276,9 @@
             android:paddingTop="@dimen/y15"
             android:text="@string/mine_tv7"
             android:textColor="@color/text33"
-            android:textSize="@dimen/text_size16" />
+            android:textSize="@dimen/text_size16" />-->
 
-        <TextView
+       <!-- <TextView
             android:id="@+id/tv_8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -293,7 +293,7 @@
             android:paddingTop="@dimen/y15"
             android:text="@string/mine_tv8"
             android:textColor="@color/text33"
-            android:textSize="@dimen/text_size16" />
+            android:textSize="@dimen/text_size16" />-->
 
         <TextView
             android:id="@+id/tv_9"
