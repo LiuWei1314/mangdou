@@ -2,8 +2,6 @@ package com.p609915198.basemodule.net;
 
 
 import com.p609915198.basemodule.net.request.AddPlayRecordRequest;
-import com.p609915198.basemodule.net.request.AlreadyBuyRequest;
-import com.p609915198.basemodule.net.request.AnchorDetailRequest;
 import com.p609915198.basemodule.net.request.AnchorMoreRequest;
 import com.p609915198.basemodule.net.request.AudioDetailRequest;
 import com.p609915198.basemodule.net.request.AwardRankRequest;
@@ -24,7 +22,6 @@ import com.p609915198.basemodule.net.request.MyGiftRequest;
 import com.p609915198.basemodule.net.request.MyReceiveAwardRequest;
 import com.p609915198.basemodule.net.request.MyReceiveGiftRequest;
 import com.p609915198.basemodule.net.request.MyRoomsRequest;
-import com.p609915198.basemodule.net.request.MySubscribeRequest;
 import com.p609915198.basemodule.net.request.PagerOneRequest;
 import com.p609915198.basemodule.net.request.PostReplyRequest;
 import com.p609915198.basemodule.net.request.PublishAudioRequest;
@@ -110,8 +107,8 @@ public class Api {
 
     public Observable secondaryRooms(SecondaryRoomsRequest request) { return mApiService.secondaryRooms(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
-    public Observable alreadyBuy(AlreadyBuyRequest request) {
-        return mApiService.alreadyBuy(request.getUser_id()).compose(RxUtils.ioMain()).map(new HttpResultFunc());
+    public Observable alreadyBuy(String userId, int page, int pageSize) {
+        return mApiService.alreadyBuy(userId, page, pageSize).compose(RxUtils.ioMain()).map(new HttpResultFunc());
     }
 
     public Observable pagerOne(PagerOneRequest request) { return mApiService.pagerOne(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
@@ -210,7 +207,7 @@ public class Api {
 
     public Observable roomsList(int labeltype) { return mApiService.roomsList(labeltype).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
-    public Observable top(String userId) { return mApiService.top(userId).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
+    public Observable top(String userId) { return mApiService.top(userId).compose(RxUtils.ioMain());}
 
     public Observable send(String msg, String phone) { return mApiService.send(msg, phone).compose(RxUtils.ioMain());}
 

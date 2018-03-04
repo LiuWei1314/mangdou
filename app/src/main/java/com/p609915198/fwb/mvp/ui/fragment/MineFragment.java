@@ -21,11 +21,16 @@ import com.p609915198.fwb.mvp.contract.MineContract;
 import com.p609915198.fwb.mvp.di.component.DaggerMineComponent;
 import com.p609915198.fwb.mvp.di.module.MineModule;
 import com.p609915198.fwb.mvp.presenter.MinePresenter;
+import com.p609915198.fwb.mvp.ui.activity.AlreadyBuyActivity;
 import com.p609915198.fwb.mvp.ui.activity.GeneralSettingsActivity;
+import com.p609915198.fwb.mvp.ui.activity.GiftActivity;
 import com.p609915198.fwb.mvp.ui.activity.HistoryActivity;
 import com.p609915198.fwb.mvp.ui.activity.LoginActivity;
 import com.p609915198.fwb.mvp.ui.activity.MyDownloadActivity;
 import com.p609915198.fwb.mvp.ui.activity.MySubscribeActivity;
+import com.p609915198.fwb.mvp.ui.activity.MyWalletActivity;
+import com.p609915198.fwb.mvp.ui.activity.RewardActivity;
+import com.p609915198.fwb.mvp.ui.activity.TitleActivity;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -92,15 +97,19 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
 
     @OnClick({R.id.tv_subscribe})
     public void mySubscribe(View view) {
-        if (!AppConfig.isLogin()) {
-            showToast("请先登录！");
-            return;
-        }
         switch (view.getId()) {
             case R.id.tv_subscribe:
+                if (!AppConfig.isLogin()) {
+                    showToast("请先登录！");
+                    return;
+                }
                 launchActivity(new Intent(mActivity, MySubscribeActivity.class));
                 break;
             case R.id.tv_history:
+                if (!AppConfig.isLogin()) {
+                    showToast("请先登录！");
+                    return;
+                }
                 launchActivity(new Intent(mActivity, HistoryActivity.class));
                 break;
             case R.id.tv_download:
@@ -109,7 +118,7 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
         }
     }
 
-    @OnClick({R.id.tv_3, R.id.tv_4, R.id.tv_5, R.id.tv_history})
+    @OnClick({R.id.tv_3, R.id.tv_4, R.id.tv_5, R.id.tv_7, R.id.tv_history})
     public void onViewClicked(View view) {
         if (!AppConfig.isLogin()) {
             showToast("请先登录！");
@@ -117,10 +126,22 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
         }
         switch (view.getId()) {
             case R.id.tv_3:
+                launchActivity(new Intent(mActivity, TitleActivity.class));
                 break;
             case R.id.tv_4:
+                launchActivity(new Intent(mActivity, AlreadyBuyActivity.class));
                 break;
             case R.id.tv_5:
+                launchActivity(new Intent(mActivity, MyWalletActivity.class));
+                break;
+            case R.id.tv_7:
+                showToast("电话号码：15130102555");
+                break;
+            case R.id.tv_6_1:
+                launchActivity(new Intent(mActivity, GiftActivity.class));
+                break;
+            case R.id.tv_6_2:
+                launchActivity(new Intent(mActivity, RewardActivity.class));
                 break;
         }
     }

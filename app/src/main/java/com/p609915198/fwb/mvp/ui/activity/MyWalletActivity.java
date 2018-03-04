@@ -7,19 +7,19 @@ import android.widget.TextView;
 import com.p609915198.basemodule.base.BaseActivity;
 import com.p609915198.basemodule.di.component.BaseComponent;
 import com.p609915198.fwb.R;
-import com.p609915198.fwb.mvp.contract.MyDownloadContract;
-import com.p609915198.fwb.mvp.di.component.DaggerMyDownloadComponent;
-import com.p609915198.fwb.mvp.di.module.MyDownloadModule;
-import com.p609915198.fwb.mvp.presenter.MyDownloadPresenter;
+import com.p609915198.fwb.mvp.contract.MyWalletContract;
+import com.p609915198.fwb.mvp.di.component.DaggerMyWalletComponent;
+import com.p609915198.fwb.mvp.di.module.MyWalletModule;
+import com.p609915198.fwb.mvp.presenter.MyWalletPresenter;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
- * 我的下载
- * Created by Administrator on 2018/2/26.
+ * 我的钱包
+ * Created by Administrator on 2018/3/4.
  */
-public class MyDownloadActivity extends BaseActivity<MyDownloadPresenter> implements MyDownloadContract.View {
+public class MyWalletActivity extends BaseActivity<MyWalletPresenter> implements MyWalletContract.View {
     @BindView(R.id.tv_left) TextView tvLeft;
     @BindView(R.id.tv_center) TextView tvCenter;
     @BindView(R.id.iv_right) ImageView ivRight;
@@ -27,27 +27,25 @@ public class MyDownloadActivity extends BaseActivity<MyDownloadPresenter> implem
 
     @Override
     protected void setupActivityComponent(BaseComponent baseComponent) {
-        DaggerMyDownloadComponent
+        DaggerMyWalletComponent
                 .builder()
                 .baseComponent(baseComponent)
-                .myDownloadModule(new MyDownloadModule(this)) //请将MyDownloadModule()第一个首字母改为小写
+                .myWalletModule(new MyWalletModule(this)) //请将MyWalletModule()第一个首字母改为小写
                 .build()
                 .inject(this);
     }
 
     @Override
     protected int getLayoutRes() {
-        return R.layout.activity_my_download;
+        return R.layout.activity_my_wallet;
     }
 
     @Override
     protected void initData() {
         tvCenter.setVisibility(View.VISIBLE);
-        tvCenter.setText("我的下载");
+        tvCenter.setText("我的钱包");
     }
 
     @OnClick(R.id.tv_left)
-    public void onViewClicked() {
-        killMyself();
-    }
+    public void onViewClicked() {killMyself();}
 }

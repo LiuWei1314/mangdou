@@ -246,22 +246,56 @@
             android:textColor="@color/text33"
             android:textSize="@dimen/text_size16" />
 
-        <!-- <TextView
-             android:id="@+id/tv_6"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:layout_marginLeft="@dimen/x18"
-             android:layout_marginRight="@dimen/x16"
-             android:layout_marginTop="@dimen/y33"
-             android:drawableLeft="@mipmap/ic_mine_img6"
-             android:drawablePadding="16dp"
-             android:drawableRight="@mipmap/ic_right"
-             android:gravity="center_vertical"
-             android:text="@string/mine_tv6"
-             android:textColor="@color/text33"
-             android:textSize="@dimen/text_size16" />-->
+        <TextView
+            android:id="@+id/tv_6_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_click"
+            android:drawableLeft="@mipmap/ic_mine_img5"
+            android:drawablePadding="16dp"
+            android:drawableRight="@mipmap/ic_right"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y15"
+            android:paddingLeft="@dimen/x18"
+            android:paddingRight="@dimen/x16"
+            android:paddingTop="@dimen/y15"
+            android:text="我的礼物"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size16" />
 
-     <!--   <TextView
+        <TextView
+            android:id="@+id/tv_6_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_click"
+            android:drawableLeft="@mipmap/ic_mine_img5"
+            android:drawablePadding="16dp"
+            android:drawableRight="@mipmap/ic_right"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/y15"
+            android:paddingLeft="@dimen/x18"
+            android:paddingRight="@dimen/x16"
+            android:paddingTop="@dimen/y15"
+            android:text="我的打赏"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size16" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_6"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/x18"-->
+        <!--android:layout_marginRight="@dimen/x16"-->
+        <!--android:layout_marginTop="@dimen/y33"-->
+        <!--android:drawableLeft="@mipmap/ic_mine_img6"-->
+        <!--android:drawablePadding="16dp"-->
+        <!--android:drawableRight="@mipmap/ic_right"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:text="@string/mine_tv6"-->
+        <!--android:textColor="@color/text33"-->
+        <!--android:textSize="@dimen/text_size16" />-->
+
+        <TextView
             android:id="@+id/tv_7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -276,9 +310,9 @@
             android:paddingTop="@dimen/y15"
             android:text="@string/mine_tv7"
             android:textColor="@color/text33"
-            android:textSize="@dimen/text_size16" />-->
+            android:textSize="@dimen/text_size16" />
 
-       <!-- <TextView
+        <TextView
             android:id="@+id/tv_8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -293,7 +327,7 @@
             android:paddingTop="@dimen/y15"
             android:text="@string/mine_tv8"
             android:textColor="@color/text33"
-            android:textSize="@dimen/text_size16" />-->
+            android:textSize="@dimen/text_size16" />
 
         <TextView
             android:id="@+id/tv_9"

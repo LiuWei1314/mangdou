@@ -18,6 +18,7 @@ import com.p609915198.fwb.mvp.di.component.DaggerHotComponent;
 import com.p609915198.fwb.mvp.di.module.HotModule;
 import com.p609915198.fwb.mvp.presenter.HotPresenter;
 import com.p609915198.fwb.mvp.ui.activity.RoomsMoreActivity;
+import com.p609915198.fwb.mvp.ui.activity.TitleActivity;
 import com.p609915198.fwb.mvp.ui.activity.TitleOfTopActivity;
 import com.p609915198.fwb.mvp.ui.adapter.HotAdapter;
 
@@ -113,7 +114,7 @@ public class HotFragment extends BaseFragment<HotPresenter> implements HotContra
                 intent.putExtra("label", "新品榜");
                 break;
             case R.id.tv_menu4:
-                intent = new Intent(mActivity, TitleOfTopActivity.class);
+                intent = new Intent(mActivity, TitleActivity.class);
                 break;
         }
         if (null != intent) {

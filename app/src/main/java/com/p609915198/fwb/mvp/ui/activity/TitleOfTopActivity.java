@@ -82,8 +82,8 @@ public class TitleOfTopActivity extends BaseActivity<TitleOfTopPresenter> implem
 
     @Override
     public void initViews(TopResponse response) {
-        Glide.with(this).load(response.getImg_url()).into(mCivHead);
-        mTvName.setText(response.getBrand());
-        mTvLevel.setText("忙豆等级:" + response.getVip_level());
+//        Glide.with(this).load(response.getImg_url()).into(mCivHead);
+//        mTvName.setText(response.getBrand());
+//        mTvLevel.setText("忙豆等级:" + response.getVip_level());
     }
 }

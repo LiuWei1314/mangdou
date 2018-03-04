@@ -5,7 +5,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,7 +30,6 @@ public class SearchActivity extends BaseActivity<SearchPresenter> implements Sea
     @BindView(R.id.tv_center) TextView mTvCenter;
     @BindView(R.id.iv_right) ImageView mIvRight;
     @BindView(R.id.tv_right) TextView mTvRight;
-    @BindView(R.id.bt_search) Button mBtSearch;
     @BindView(R.id.rv) RecyclerView mRv;
     @BindView(R.id.et_search) EditText mEditText;
 
@@ -55,13 +53,13 @@ public class SearchActivity extends BaseActivity<SearchPresenter> implements Sea
         mPresenter.initViews();
     }
 
-    @OnClick({R.id.tv_left, R.id.bt_search})
+    @OnClick({R.id.tv_left, R.id.tv_search})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_left:
                 killMyself();
                 break;
-            case R.id.bt_search:
+            case R.id.tv_search:
                 String content = mEditText.getText().toString();
                 if (TextUtils.isEmpty(content) || TextUtils.isEmpty(content.trim())) {
                     showToast("输入的内容不能为空！");

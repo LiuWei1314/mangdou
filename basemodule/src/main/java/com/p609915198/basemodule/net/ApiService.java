@@ -226,7 +226,7 @@ public interface ApiService {
     Observable<HttpResult<List<SecondaryRoomsResponse>>> secondaryRooms(@Body SecondaryRoomsRequest request);
 
     @POST(ALREADY_BUY)
-    Observable<HttpResult<List<AlreadyBuyResponse>>> alreadyBuy(@Query("user_id") String userId);
+    Observable<HttpResult<List<AlreadyBuyResponse>>> alreadyBuy(@Query("user_id") String userId, @Query("page") int page, @Query("pagesize") int pagesize);
 
     @POST(PAGER_ONE)
     Observable<HttpResult<List<PagerOneResponse>>> pagerOne(@Body PagerOneRequest request);
@@ -374,7 +374,7 @@ public interface ApiService {
     Observable<HttpResult<List<RoomsListResponse>>> roomsList(@Query("labeltype") int request);
 
     @POST(TOP)
-    Observable<HttpResult<TopResponse>> top(@Query("user_id") String userId);
+    Observable<TopResponse> top(@Query("user_id") String userId);
 
     @POST(SEND)
     Observable<HttpResult<SendResponse>> send(@Query("code") String msg, @Query("phone") String phone);

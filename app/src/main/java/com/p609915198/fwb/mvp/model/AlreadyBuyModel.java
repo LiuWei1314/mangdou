@@ -15,16 +15,14 @@ import io.reactivex.Observable;
  */
 @ActivityScope
 public class AlreadyBuyModel extends BaseModel implements AlreadyBuyContract.Model {
-    private Api mApi;
 
     @Inject
     public AlreadyBuyModel(Api api) {
         super();
-        this.mApi = api;
     }
 
     @Override
     public Observable getAlreadyBuyData(AlreadyBuyRequest request) {
-        return mApi.alreadyBuy(request);
+        return null;
     }
 }

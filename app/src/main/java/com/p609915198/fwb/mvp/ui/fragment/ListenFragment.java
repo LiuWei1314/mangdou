@@ -9,10 +9,12 @@ import android.widget.TextView;
 import com.p609915198.basemodule.base.BaseFragment;
 import com.p609915198.basemodule.di.component.BaseComponent;
 import com.p609915198.fwb.R;
+import com.p609915198.fwb.app.AppConfig;
 import com.p609915198.fwb.mvp.contract.ListenContract;
 import com.p609915198.fwb.mvp.di.component.DaggerListenComponent;
 import com.p609915198.fwb.mvp.di.module.ListenModule;
 import com.p609915198.fwb.mvp.presenter.ListenPresenter;
+import com.p609915198.fwb.mvp.ui.activity.AlreadyBuyActivity;
 import com.p609915198.fwb.mvp.ui.activity.HistoryActivity;
 import com.p609915198.fwb.mvp.ui.activity.MyDownloadActivity;
 
@@ -63,10 +65,18 @@ public class ListenFragment extends BaseFragment<ListenPresenter> implements Lis
                 launchActivity(new Intent(mActivity, MyDownloadActivity.class));
                 break;
             case R.id.ll_history_size:
+                if (!AppConfig.isLogin()) {
+                    showToast("请先登录！");
+                    return;
+                }
                 launchActivity(new Intent(mActivity, HistoryActivity.class));
                 break;
             case R.id.ll_buy_size:
-                launchActivity(new Intent(mActivity, MyDownloadActivity.class));
+                if (!AppConfig.isLogin()) {
+                    showToast("请先登录！");
+                    return;
+                }
+                launchActivity(new Intent(mActivity, AlreadyBuyActivity.class));
                 break;
         }
     }

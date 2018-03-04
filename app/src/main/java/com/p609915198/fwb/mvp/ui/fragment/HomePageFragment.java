@@ -28,6 +28,7 @@ import com.p609915198.fwb.mvp.contract.HomePageContract;
 import com.p609915198.fwb.mvp.di.component.DaggerHomePageComponent;
 import com.p609915198.fwb.mvp.di.module.HomePageModule;
 import com.p609915198.fwb.mvp.presenter.HomePagePresenter;
+import com.p609915198.fwb.mvp.ui.activity.MyDownloadActivity;
 import com.p609915198.fwb.mvp.ui.activity.PlayRecordActivity;
 import com.p609915198.fwb.mvp.ui.activity.SearchActivity;
 import com.p609915198.fwb.mvp.ui.adapter.TabPageIndicatorAdapter;
@@ -102,9 +103,7 @@ public class HomePageFragment extends BaseFragment<HomePagePresenter> implements
                 }
                 break;
             case R.id.iv_download:
-                ToastUtils.showShort("下载");
-
-                test();
+                launchActivity(new Intent(mActivity, MyDownloadActivity.class));
                 break;
             case R.id.tv_search:
                 launchActivity(new Intent(mActivity, SearchActivity.class));
