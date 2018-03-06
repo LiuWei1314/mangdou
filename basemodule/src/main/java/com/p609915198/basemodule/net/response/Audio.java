@@ -25,7 +25,7 @@ public class Audio implements Serializable {
     private String audio_set;
     private String audio_id;
     private String sort;
-    private String audio_sum;
+    private int audio_sum;
     private String audio_name;
     private String audio_path;
     private String filesize;
@@ -74,9 +74,13 @@ public class Audio implements Serializable {
 
     public void setSort(String sort) { this.sort = sort;}
 
-    public String getAudio_sum() { return audio_sum;}
+    public int getAudio_sum() {
+        return audio_sum;
+    }
 
-    public void setAudio_sum(String audio_sum) { this.audio_sum = audio_sum;}
+    public void setAudio_sum(int audio_sum) {
+        this.audio_sum = audio_sum;
+    }
 
     public String getAudio_name() { return audio_name;}
 

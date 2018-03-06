@@ -1,15 +1,12 @@
 package com.p609915198.fwb.mvp.presenter;
 
 import android.content.Intent;
-import android.os.Environment;
 
-import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.p609915198.basemodule.base.BasePresenter;
 import com.p609915198.basemodule.di.scope.FragmentScope;
 import com.p609915198.basemodule.net.ProgressSubscriber;
 import com.p609915198.basemodule.net.SubscriberOnNextListener;
-import com.p609915198.basemodule.net.UrlConstant;
 import com.p609915198.basemodule.net.response.Audio;
 import com.p609915198.basemodule.net.response.RoomDetailResponse;
 import com.p609915198.fwb.R;
@@ -17,16 +14,11 @@ import com.p609915198.fwb.app.AppConfig;
 import com.p609915198.fwb.mvp.contract.PlayListContract;
 import com.p609915198.fwb.mvp.ui.activity.PlayActivity;
 import com.p609915198.fwb.mvp.ui.adapter.PlayListAdapter;
-import com.zhy.http.okhttp.OkHttpUtils;
-import com.zhy.http.okhttp.callback.FileCallBack;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
-
-import okhttp3.Call;
 
 /**
  * Created by Administrator on 2017/12/25.
@@ -63,6 +55,10 @@ public class PlayListPresenter extends BasePresenter<PlayListContract.Model, Pla
                       new SubscriberOnNextListener<List<Audio>>() {
                           @Override
                           protected void onNext(List<Audio> audioRespons) {
+                              if (!audioRespons.isEmpty()) {
+                                  mRootView.setTotalNum(audioRespons.get(0).getAudio_sum());
+                              }
+
                               mPlayListAdapter.loadMoreEnd();
                               if (!audioRespons.isEmpty()) {
                                   for (Audio au : audioRespons) {

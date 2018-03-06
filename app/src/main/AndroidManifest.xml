@@ -200,7 +200,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".mvp.ui.activity.FeedBackActivity"></activity>
+        <activity android:name=".mvp.ui.activity.FeedBackActivity" />
+        <activity android:name=".mvp.ui.activity.ListDownloadActivity"></activity>
     </application>
 
 </manifest>

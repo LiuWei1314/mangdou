@@ -1,6 +1,7 @@
 package com.p609915198.fwb.mvp.ui.fragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,9 +16,11 @@ import com.p609915198.fwb.mvp.contract.PlayListContract;
 import com.p609915198.fwb.mvp.di.component.DaggerPlayListComponent;
 import com.p609915198.fwb.mvp.di.module.PlayListModule;
 import com.p609915198.fwb.mvp.presenter.PlayListPresenter;
+import com.p609915198.fwb.mvp.ui.activity.ListDownloadActivity;
 import com.p609915198.fwb.mvp.ui.adapter.PlayListAdapter;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/12/25.
@@ -76,11 +79,16 @@ public class PlayListFragment extends BaseFragment<PlayListPresenter> implements
 
     @Override
     public void setTotalNum(int num) {
-//        mTvTotalNum.setText(String.valueOf(num));
+        mTvTotalNum.setText(String.valueOf(num));
     }
 
     @Override
     public RecyclerView getRV() {
         return mRv;
+    }
+
+    @OnClick(R.id.tv_list_download)
+    public void onViewClicked() {
+        launchActivity(new Intent(mActivity, ListDownloadActivity.class));
     }
 }
