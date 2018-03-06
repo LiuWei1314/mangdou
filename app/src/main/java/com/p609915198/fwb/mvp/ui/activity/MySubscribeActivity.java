@@ -56,13 +56,15 @@ public class MySubscribeActivity extends BaseActivity<MySubscribePresenter> impl
     @Override
     protected void initData() {
         tvCenter.setText("我的订阅");
-        mApi.mySubscribe(AppConfig.getUserId())
+        mApi.mySubscribe(AppConfig.getUserId(), 1, 100)
             .compose(RxUtils.bindToLifecycle(this))
             .subscribe(new ProgressSubscriber<>(
                     new SubscriberOnNextListener<List<MySubscribeResponse>>() {
                         @Override
                         protected void onNext(List<MySubscribeResponse> mySubscribeResponses) {
-
+                            if (mySubscribeResponses.isEmpty()) {
+                                showToast("您的订阅列表为空！");
+                            }
                         }
                     },
                     this

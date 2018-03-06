@@ -9,7 +9,6 @@ import com.p609915198.basemodule.net.request.ChangePwdPhoneRequest;
 import com.p609915198.basemodule.net.request.ChangeUserInfoRequest;
 import com.p609915198.basemodule.net.request.CreateRoomRequest;
 import com.p609915198.basemodule.net.request.DeleteRoomRequest;
-import com.p609915198.basemodule.net.request.FeedBackRequest;
 import com.p609915198.basemodule.net.request.GetWithdrawInfoRequest;
 import com.p609915198.basemodule.net.request.GiveAwardRequest;
 import com.p609915198.basemodule.net.request.GiveGiftRequest;
@@ -17,10 +16,6 @@ import com.p609915198.basemodule.net.request.HomeadRequest;
 import com.p609915198.basemodule.net.request.IsLikeRequest;
 import com.p609915198.basemodule.net.request.LikeRoomRequest;
 import com.p609915198.basemodule.net.request.ModifyRoomRequest;
-import com.p609915198.basemodule.net.request.MyAwardRequest;
-import com.p609915198.basemodule.net.request.MyGiftRequest;
-import com.p609915198.basemodule.net.request.MyReceiveAwardRequest;
-import com.p609915198.basemodule.net.request.MyReceiveGiftRequest;
 import com.p609915198.basemodule.net.request.MyRoomsRequest;
 import com.p609915198.basemodule.net.request.PagerOneRequest;
 import com.p609915198.basemodule.net.request.PostReplyRequest;
@@ -115,17 +110,17 @@ public class Api {
 
     public Observable radioPlay() { return mApiService.radioPlay().compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
-    public Observable myReceiveAward(MyReceiveAwardRequest request) { return mApiService.myReceiveAward(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
+    public Observable myReceiveAward(String userId, int page, int pageSize) { return mApiService.myReceiveAward(userId, page, pageSize).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
-    public Observable myReceiveGift(MyReceiveGiftRequest request) { return mApiService.myReceiveGift(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
+    public Observable myReceiveGift(String userId, int page, int pageSize) { return mApiService.myReceiveGift(userId, page, pageSize).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
     public Observable myRooms(MyRoomsRequest request) { return mApiService.myRooms(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
-    public Observable myAward(MyAwardRequest request) { return mApiService.myAward(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
+    public Observable myAward(String userId, int page, int pageSize) { return mApiService.myAward(userId, page, pageSize).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
-    public Observable mySubscribe(String userId) { return mApiService.mySubscribe(userId).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
+    public Observable mySubscribe(String userId, int page, int pageSize) { return mApiService.mySubscribe(userId, page, pageSize).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
-    public Observable myGift(MyGiftRequest request) { return mApiService.myGift(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
+    public Observable myGift(String userId, int page, int pageSize) { return mApiService.myGift(userId, page, pageSize).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
     public Observable myAward(GiveAwardRequest request) { return mApiService.myAward(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
@@ -151,7 +146,7 @@ public class Api {
 
     public Observable hotClassics() { return mApiService.hotClassics().compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
-    public Observable feedBack(FeedBackRequest request) { return mApiService.feedBack(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
+    public Observable feedBack(String userId, String msg) { return mApiService.feedBack(userId, msg).compose(RxUtils.ioMain());}
 
     public Observable userBaseInfo(String userId) { return mApiService.userBaseInfo(userId).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 

@@ -62,10 +62,9 @@ public class PlayListAdapter extends BaseQuickAdapter<Audio, BaseViewHolder> {
 
                                        @Override
                                        public void onResponse(File response, int id) {
-                                           LogUtils.e(TAG, "onResponse :" + response.getAbsolutePath());
                                            ToastUtils.showShort(item.getAudio_name() + "下载成功！");
 
-                                           helper.setImageResource(R.id.rl, R.mipmap.ic_download_success);
+                                           helper.setImageResource(R.id.iv_download, R.mipmap.ic_download_success);
                                            helper.getView(R.id.iv_download).setClickable(false);
                                        }
                                    });

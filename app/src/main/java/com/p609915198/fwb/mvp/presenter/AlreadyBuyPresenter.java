@@ -34,7 +34,7 @@ public class AlreadyBuyPresenter extends BasePresenter<AlreadyBuyContract.Model,
     }
 
     public void initData() {
-        mApi.alreadyBuy(AppConfig.getUserId(), 1, 100)
+        mApi.alreadyBuy(AppConfig.getUserId(), 0, 100)
             .compose(RxUtils.bindToLifecycle(mRootView))
             .subscribe(new ProgressSubscriber<>(
                     new SubscriberOnNextListener<List<AlreadyBuyResponse>>() {

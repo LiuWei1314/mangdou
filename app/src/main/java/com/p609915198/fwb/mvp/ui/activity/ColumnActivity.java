@@ -137,14 +137,11 @@ public class ColumnActivity extends BaseActivity<ColumnPresenter> implements Col
 
         mFragmentList.add(RoomDetailFragment.newInstance(roomDetailResponse, roomId));
         mFragmentList.add(PlayListFragment.newInstance(roomDetailResponse, roomId));
-        mColumnAdapter = new
-
-                ColumnAdapter(getSupportFragmentManager(), mFragmentList);
+        mColumnAdapter = new ColumnAdapter(getSupportFragmentManager(), mFragmentList);
         mViewPager.setAdapter(mColumnAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
 
         reflex(mTabLayout, 50);
-
     }
 
     @OnClick({R.id.tv_left})

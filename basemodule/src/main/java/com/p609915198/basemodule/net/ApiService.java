@@ -7,7 +7,6 @@ import com.p609915198.basemodule.net.request.AwardRankRequest;
 import com.p609915198.basemodule.net.request.ChangePwdPhoneRequest;
 import com.p609915198.basemodule.net.request.CreateRoomRequest;
 import com.p609915198.basemodule.net.request.DeleteRoomRequest;
-import com.p609915198.basemodule.net.request.FeedBackRequest;
 import com.p609915198.basemodule.net.request.GetWithdrawInfoRequest;
 import com.p609915198.basemodule.net.request.GiveAwardRequest;
 import com.p609915198.basemodule.net.request.GiveGiftRequest;
@@ -15,10 +14,6 @@ import com.p609915198.basemodule.net.request.HomeadRequest;
 import com.p609915198.basemodule.net.request.IsLikeRequest;
 import com.p609915198.basemodule.net.request.LikeRoomRequest;
 import com.p609915198.basemodule.net.request.ModifyRoomRequest;
-import com.p609915198.basemodule.net.request.MyAwardRequest;
-import com.p609915198.basemodule.net.request.MyGiftRequest;
-import com.p609915198.basemodule.net.request.MyReceiveAwardRequest;
-import com.p609915198.basemodule.net.request.MyReceiveGiftRequest;
 import com.p609915198.basemodule.net.request.MyRoomsRequest;
 import com.p609915198.basemodule.net.request.PagerOneRequest;
 import com.p609915198.basemodule.net.request.PostReplyRequest;
@@ -235,22 +230,22 @@ public interface ApiService {
     Observable<HttpResult<List<RadioPlayResponse>>> radioPlay();
 
     @POST(MY_RECEIVE_AWARD)
-    Observable<HttpResult<List<MyReceiveAwardResponse>>> myReceiveAward(@Body MyReceiveAwardRequest request);
+    Observable<HttpResult<List<MyReceiveAwardResponse>>> myReceiveAward(@Query("user_id") String userId, @Query("page") int page, @Query("pagesize") int pagesize);
 
     @POST(MY_RECEIVE_GIFT)
-    Observable<HttpResult<List<MyReceiveGiftResponse>>> myReceiveGift(@Body MyReceiveGiftRequest request);
+    Observable<HttpResult<List<MyReceiveGiftResponse>>> myReceiveGift(@Query("user_id") String userId, @Query("page") int page, @Query("pagesize") int pagesize);
 
     @POST(MY_ROOMS)
     Observable<HttpResult<List<MyRoomsResponse>>> myRooms(@Body MyRoomsRequest request);
 
     @POST(MY_AWARD)
-    Observable<HttpResult<List<MyAwardResponse>>> myAward(@Body MyAwardRequest request);
+    Observable<HttpResult<List<MyAwardResponse>>> myAward(@Query("user_id") String userId, @Query("page") int page, @Query("pagesize") int pagesize);
 
     @POST(MY_SUBSCRIBE)
-    Observable<HttpResult<List<MySubscribeResponse>>> mySubscribe(@Query("user_id") String userId);
+    Observable<HttpResult<List<MySubscribeResponse>>> mySubscribe(@Query("user_id") String userId, @Query("page") int page, @Query("pagesize") int pagesize);
 
     @POST(MY_GIFT)
-    Observable<HttpResult<List<MyGiftResponse>>> myGift(@Body MyGiftRequest request);
+    Observable<HttpResult<List<MyGiftResponse>>> myGift(@Query("user_id") String userId, @Query("page") int page, @Query("pagesize") int pagesize);
 
     @POST(GIVE_AWARD)
     Observable<HttpResult<String>> myAward(@Body GiveAwardRequest request);
@@ -289,7 +284,7 @@ public interface ApiService {
     Observable<HttpResult<List<HotClassicsResponse>>> hotClassics();
 
     @POST(FEEDBACK)
-    Observable<HttpResult<String>> feedBack(@Body FeedBackRequest request);
+    Observable<HttpResult> feedBack(@Query("user_id") String userId, @Query("content") String content);
 
     @POST(USER_BASE_INFO)
     Observable<HttpResult<UserBaseInfoResponse>> userBaseInfo(@Query("user_id") String userId);

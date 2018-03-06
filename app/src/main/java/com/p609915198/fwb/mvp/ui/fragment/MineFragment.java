@@ -22,6 +22,7 @@ import com.p609915198.fwb.mvp.di.component.DaggerMineComponent;
 import com.p609915198.fwb.mvp.di.module.MineModule;
 import com.p609915198.fwb.mvp.presenter.MinePresenter;
 import com.p609915198.fwb.mvp.ui.activity.AlreadyBuyActivity;
+import com.p609915198.fwb.mvp.ui.activity.FeedBackActivity;
 import com.p609915198.fwb.mvp.ui.activity.GeneralSettingsActivity;
 import com.p609915198.fwb.mvp.ui.activity.GiftActivity;
 import com.p609915198.fwb.mvp.ui.activity.HistoryActivity;
@@ -118,7 +119,7 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
         }
     }
 
-    @OnClick({R.id.tv_3, R.id.tv_4, R.id.tv_5, R.id.tv_7, R.id.tv_history})
+    @OnClick({R.id.tv_3, R.id.tv_4, R.id.tv_5, R.id.tv_7, R.id.tv_6_1, R.id.tv_6_2, R.id.tv_8, R.id.tv_history})
     public void onViewClicked(View view) {
         if (!AppConfig.isLogin()) {
             showToast("请先登录！");
@@ -142,6 +143,9 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
                 break;
             case R.id.tv_6_2:
                 launchActivity(new Intent(mActivity, RewardActivity.class));
+                break;
+            case R.id.tv_8:
+                launchActivity(new Intent(mActivity, FeedBackActivity.class));
                 break;
         }
     }

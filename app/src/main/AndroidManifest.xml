@@ -92,11 +92,13 @@
             android:name=".mvp.ui.activity.GeneralSettingsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
 
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".mvp.ui.activity.ForgetPasswordActivity"
@@ -159,7 +161,6 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
-
         <!-- 微信支付 -->
         <activity
             android:name=".wxapi.WXPayEntryActivity"
@@ -172,7 +173,7 @@
             android:exported="true"
             android:launchMode="singleTop" />
 
-        <!--支付宝支付-->
+        <!-- 支付宝支付 -->
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
@@ -186,7 +187,6 @@
             android:screenOrientation="behind"
             android:windowSoftInputMode="adjustResize|stateHidden" />
 
-
         <service android:name=".app.service.PlayService" />
 
         <receiver android:name=".app.receive.RemoteControlReceiver">
@@ -194,13 +194,13 @@
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
         </receiver>
-
         <receiver android:name=".app.receive.StatusBarReceiver">
             <intent-filter>
                 <action android:name="com.p609915198.fwb.app.STATUS_BAR_ACTIONS" />
             </intent-filter>
         </receiver>
 
+        <activity android:name=".mvp.ui.activity.FeedBackActivity"></activity>
     </application>
 
 </manifest>
