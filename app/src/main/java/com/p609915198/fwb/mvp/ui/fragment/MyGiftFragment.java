@@ -2,6 +2,9 @@ package com.p609915198.fwb.mvp.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import com.p609915198.basemodule.base.BaseFragment;
 import com.p609915198.basemodule.di.component.BaseComponent;
@@ -16,15 +19,19 @@ import com.p609915198.fwb.mvp.contract.MyGiftContract;
 import com.p609915198.fwb.mvp.di.component.DaggerMyGiftComponent;
 import com.p609915198.fwb.mvp.di.module.MyGiftModule;
 import com.p609915198.fwb.mvp.presenter.MyGiftPresenter;
+import com.p609915198.fwb.mvp.ui.adapter.MyGiftAdapter;
 
 import java.util.List;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
+
 /**
  * 我的礼物
  */
 public class MyGiftFragment extends BaseFragment<MyGiftPresenter> implements MyGiftContract.View {
+    @BindView(R.id.rv) RecyclerView rv;
     @Inject Api mApi;
 
     public static MyGiftFragment newInstance() {
@@ -57,7 +64,10 @@ public class MyGiftFragment extends BaseFragment<MyGiftPresenter> implements MyG
                     new SubscriberOnNextListener<List<MyGiftResponse>>() {
                         @Override
                         protected void onNext(List<MyGiftResponse> responses) {
-
+                            MyGiftAdapter adapter = new MyGiftAdapter(responses);
+                            rv.addItemDecoration(new DividerItemDecoration(mActivity, DividerItemDecoration.VERTICAL));
+                            rv.setLayoutManager(new LinearLayoutManager(mActivity));
+                            rv.setAdapter(adapter);
                         }
                     },
                     mActivity, false

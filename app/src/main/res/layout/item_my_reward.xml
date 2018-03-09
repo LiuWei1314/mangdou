@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/x16">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text66"
+        android:textSize="@dimen/text_size12"
+        tools:text="啦啦啦" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y5"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/y5"
+        android:paddingTop="@dimen/y5">
+
+        <ImageView
+            android:id="@+id/cv_head"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/y50"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x12" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/cv_head"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size14"
+            tools:text="天堂一株" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginTop="@dimen/y5"
+            android:layout_toRightOf="@+id/cv_head"
+            android:textColor="@color/text66"
+            android:textSize="@dimen/text_size12"
+            tools:text="真的是太棒了" />
+    </RelativeLayout>
+</LinearLayout>
