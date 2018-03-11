@@ -21,7 +21,7 @@ public class UserBaseInfoResponse {
     private String user_volley;
     private int user_age;
     private int user_sex;
-    private int user_phone;
+    private String user_phone;
 
     public String getUser_summary() { return user_summary;}
 
@@ -47,7 +47,11 @@ public class UserBaseInfoResponse {
 
     public void setUser_sex(int user_sex) { this.user_sex = user_sex;}
 
-    public int getUser_phone() { return user_phone;}
+    public String getUser_phone() {
+        return user_phone;
+    }
 
-    public void setUser_phone(int user_phone) { this.user_phone = user_phone;}
+    public void setUser_phone(String user_phone) {
+        this.user_phone = user_phone;
+    }
 }

@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="@color/white"
         app:tabIndicatorColor="@color/main_text_selected"
         app:tabIndicatorHeight="2dp"
         app:tabSelectedTextColor="@color/main_text_selected"
