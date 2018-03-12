@@ -98,15 +98,7 @@
         <activity
             android:name=".mvp.ui.activity.GeneralSettingsActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".mvp.ui.activity.ForgetPasswordActivity"
             android:screenOrientation="portrait"
@@ -187,20 +179,6 @@
         <!--android:name=".wxapi.WXEntryActivity"-->
         <!--android:exported="true"-->
         <!--android:launchMode="singleTop" />-->
-
-        <!-- 支付宝支付 -->
-        <!--<activity-->
-        <!--android:name="com.alipay.sdk.app.H5PayActivity"-->
-        <!--android:configChanges="orientation|keyboardHidden|navigation|screenSize"-->
-        <!--android:exported="false"-->
-        <!--android:screenOrientation="behind"-->
-        <!--android:windowSoftInputMode="adjustResize|stateHidden" />-->
-        <!--<activity-->
-        <!--android:name="com.alipay.sdk.app.H5AuthActivity"-->
-        <!--android:configChanges="orientation|keyboardHidden|navigation"-->
-        <!--android:exported="false"-->
-        <!--android:screenOrientation="behind"-->
-        <!--android:windowSoftInputMode="adjustResize|stateHidden" />-->
 
         <service android:name=".app.service.PlayService" />
 
