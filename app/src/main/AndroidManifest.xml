@@ -33,10 +33,10 @@
             android:name=".mvp.ui.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-             <!--<intent-filter>-->
-             <!--<action android:name="android.intent.action.MAIN" />-->
-             <!--<category android:name="android.intent.category.LAUNCHER" />-->
-             <!--</intent-filter> -->
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter> -->
         </activity>
 
         <activity android:name=".mvp.ui.activity.TestActivity">
@@ -167,32 +167,40 @@
             android:name=".mvp.ui.activity.RewardActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.ui.activity.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.ui.activity.ListDownloadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
         <!-- 微信支付 -->
-        <activity
-            android:name=".wxapi.WXPayEntryActivity"
-            android:exported="true"
-            android:launchMode="singleTop" />
+        <!--<activity-->
+        <!--android:name=".wxapi.WXPayEntryActivity"-->
+        <!--android:exported="true"-->
+        <!--android:launchMode="singleTop" />-->
 
         <!-- 微信分享 -->
-        <activity
-            android:name=".wxapi.WXEntryActivity"
-            android:exported="true"
-            android:launchMode="singleTop" />
+        <!--<activity-->
+        <!--android:name=".wxapi.WXEntryActivity"-->
+        <!--android:exported="true"-->
+        <!--android:launchMode="singleTop" />-->
 
         <!-- 支付宝支付 -->
-        <activity
-            android:name="com.alipay.sdk.app.H5PayActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
-            android:exported="false"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
-        <activity
-            android:name="com.alipay.sdk.app.H5AuthActivity"
-            android:configChanges="orientation|keyboardHidden|navigation"
-            android:exported="false"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!--<activity-->
+        <!--android:name="com.alipay.sdk.app.H5PayActivity"-->
+        <!--android:configChanges="orientation|keyboardHidden|navigation|screenSize"-->
+        <!--android:exported="false"-->
+        <!--android:screenOrientation="behind"-->
+        <!--android:windowSoftInputMode="adjustResize|stateHidden" />-->
+        <!--<activity-->
+        <!--android:name="com.alipay.sdk.app.H5AuthActivity"-->
+        <!--android:configChanges="orientation|keyboardHidden|navigation"-->
+        <!--android:exported="false"-->
+        <!--android:screenOrientation="behind"-->
+        <!--android:windowSoftInputMode="adjustResize|stateHidden" />-->
 
         <service android:name=".app.service.PlayService" />
 
@@ -206,9 +214,5 @@
                 <action android:name="com.p609915198.fwb.app.STATUS_BAR_ACTIONS" />
             </intent-filter>
         </receiver>
-
-        <activity android:name=".mvp.ui.activity.FeedBackActivity" />
-        <activity android:name=".mvp.ui.activity.ListDownloadActivity" />
     </application>
-
 </manifest>
