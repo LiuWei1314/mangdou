@@ -7,6 +7,7 @@ import com.p609915198.basemodule.base.BaseApplication;
 import com.p609915198.fwb.BuildConfig;
 import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+import com.vondear.rxtools.RxTool;
 
 
 /**
@@ -29,14 +30,16 @@ public class MyApplication extends BaseApplication {
         // 崩溃日志
         CrashUtils.init();
 
-//        ShareConfig config = ShareConfig.instance()
-//                                        .wxId(AppConfig.WX_APP_ID)
-//                                        .wxSecret(AppConfig.WX_SECRET);
-//        ShareManager.init(config);
+////        ShareConfig config = ShareConfig.instance()
+////                                        .wxId(AppConfig.WX_APP_ID)
+////                                        .wxSecret(AppConfig.WX_SECRET);
+////        ShareManager.init(config);
+//
+//
+//        final IWXAPI msgApi = WXAPIFactory.createWXAPI(this, null);
+//        // 将该app注册到微信
+//        msgApi.registerApp(AppConfig.WX_APP_ID);
 
-
-        final IWXAPI msgApi = WXAPIFactory.createWXAPI(this, null);
-        // 将该app注册到微信
-        msgApi.registerApp(AppConfig.WX_APP_ID);
+        RxTool.init(this);
     }
 }

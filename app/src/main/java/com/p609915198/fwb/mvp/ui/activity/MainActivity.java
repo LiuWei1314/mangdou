@@ -93,8 +93,7 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainCon
                 break;
             case R.id.iv_listen_util:
                 if (null != AppConfig.getPlayService().getPlayingAudio()) {
-                    if (null != AppConfig.getRoomId() && null != AppConfig.getRoomDetail() &&
-                            null != AppConfig.getAudioCache()) {
+                    if (null != AppConfig.getRoomId() && null != AppConfig.getRoomDetail() && null != AppConfig.getAudioCache()) {
                         Intent intent = new Intent(this, PlayActivity.class);
                         intent.putExtra("audioList", (ArrayList) AppConfig.getAudioCache());
                         intent.putExtra("audio", AppConfig.getPlayService().getPlayingAudio());
