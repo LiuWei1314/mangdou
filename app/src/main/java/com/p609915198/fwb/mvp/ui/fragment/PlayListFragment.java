@@ -20,7 +20,6 @@ import com.p609915198.fwb.mvp.ui.activity.ListDownloadActivity;
 import com.p609915198.fwb.mvp.ui.adapter.PlayListAdapter;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/12/25.
@@ -62,6 +61,12 @@ public class PlayListFragment extends BaseFragment<PlayListPresenter> implements
         if (null != data) {
             mPresenter.initView(data, roomId);
             mPresenter.getData(data, roomId);
+
+            mTvListDownload.setOnClickListener(view -> {
+                Intent intent = new Intent(mActivity, ListDownloadActivity.class);
+                intent.putExtra("roomId", roomId);
+                launchActivity(intent);
+            });
         }
     }
 
@@ -85,10 +90,5 @@ public class PlayListFragment extends BaseFragment<PlayListPresenter> implements
     @Override
     public RecyclerView getRV() {
         return mRv;
-    }
-
-    @OnClick(R.id.tv_list_download)
-    public void onViewClicked() {
-        launchActivity(new Intent(mActivity, ListDownloadActivity.class));
     }
 }

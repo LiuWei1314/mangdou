@@ -12,6 +12,8 @@ import com.p609915198.fwb.mvp.contract.ListDownloadContract;
 import com.p609915198.fwb.mvp.di.component.DaggerListDownloadComponent;
 import com.p609915198.fwb.mvp.di.module.ListDownloadModule;
 import com.p609915198.fwb.mvp.presenter.ListDownloadPresenter;
+import com.p609915198.fwb.mvp.ui.adapter.ListDownloadAdapter1;
+import com.p609915198.fwb.mvp.ui.adapter.ListDownloadAdapter2;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -28,6 +30,9 @@ public class ListDownloadActivity extends BaseActivity<ListDownloadPresenter> im
     @BindView(R.id.tv_choose) TextView tvChoose;
     @BindView(R.id.rv_1) RecyclerView rv1;
     @BindView(R.id.rv_2) RecyclerView rv2;
+
+    ListDownloadAdapter1 mAdapter1;
+    ListDownloadAdapter2 mAdapter2;
 
     @Override
     public void setupActivityComponent(@NonNull BaseComponent baseComponent) {
@@ -46,6 +51,9 @@ public class ListDownloadActivity extends BaseActivity<ListDownloadPresenter> im
 
     @Override
     public void initData() {
+//        mAdapter1 = new ListDownloadAdapter1();
+//        mAdapter2 = new ListDownloadAdapter2();
+
 
     }
 
