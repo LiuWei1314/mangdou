@@ -33,12 +33,12 @@
             android:name=".mvp.ui.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter> -->
-        </activity>
 
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
         <activity android:name=".mvp.ui.activity.TestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -175,12 +175,13 @@
             android:launchMode="singleTop" />
 
         <!-- 微信分享 -->
-        <!--<activity-->
-        <!--android:name=".wxWXPayEntryActivityvity"-->
-        <!--android:exported="true"-->
-        <!--android:launchMode="singleTop" />-->
+        <!-- <activity -->
+        <!-- android:name=".wxWXPayEntryActivityvity" -->
+        <!-- android:exported="true" -->
+        <!-- android:launchMode="singleTop" /> -->
 
-        <!--支付宝支付-->
+
+        <!-- 支付宝支付 -->
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
@@ -206,5 +207,8 @@
                 <action android:name="com.p609915198.fwb.app.STATUS_BAR_ACTIONS" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".mvp.ui.activity.AboutUsActivity"></activity>
     </application>
+
 </manifest>
