@@ -13,19 +13,21 @@
         android:layout_margin="@dimen/x16"
         android:background="@color/white"
         android:gravity="start"
+        android:hint="请输入问题,并留下联系方式,我们会尽快回复"
         android:padding="@dimen/x16"
-        android:textSize="16dp" />
+        android:textColor="@color/text33"
+        android:textSize="@dimen/text_size14" />
 
     <Button
         android:id="@+id/bt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/y40"
         android:layout_marginLeft="@dimen/x16"
         android:layout_marginRight="@dimen/x16"
         android:layout_marginTop="@dimen/y10"
-        android:background="@color/main_color"
-        android:text="提交"
+        android:background="@drawable/shape_item_already_buy_comments"
+        android:text="保存"
         android:textColor="@color/white"
-        android:textSize="@dimen/text_size16" />
+        android:textSize="@dimen/text_size18" />
 
 </LinearLayout>
