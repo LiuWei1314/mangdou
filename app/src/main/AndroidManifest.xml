@@ -169,16 +169,30 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
 
         <!-- 微信支付 -->
-        <!--<activity-->
-        <!--android:name=".wxapi.WXPayEntryActivity"-->
-        <!--android:exported="true"-->
-        <!--android:launchMode="singleTop" />-->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
 
         <!-- 微信分享 -->
         <!--<activity-->
-        <!--android:name=".wxapi.WXEntryActivity"-->
+        <!--android:name=".wxWXPayEntryActivityvity"-->
         <!--android:exported="true"-->
         <!--android:launchMode="singleTop" />-->
+
+        <!--支付宝支付-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <service android:name=".app.service.PlayService" />
 

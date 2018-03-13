@@ -64,7 +64,6 @@ dependencies {
     api rootProject.ext.dependencies["fastjson-android"]
     api rootProject.ext.dependencies["utils"]
     api rootProject.ext.dependencies["baseAdapter"]
-    api 'com.github.vondear:RxTools:v1.7.7.1'
     implementation rootProject.ext.dependencies["multidex"]
     implementation rootProject.ext.dependencies["convert-fastjson-android"]
     testImplementation rootProject.ext.dependencies["junit"]

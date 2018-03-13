@@ -14,7 +14,7 @@ public class ChargeResponse {
     private int code;
     private String msg;
     private String danhao;
-    private int pay_price;
+    private double pay_price;
 
     public int getCode() { return code;}
 
@@ -28,7 +28,7 @@ public class ChargeResponse {
 
     public void setDanhao(String danhao) { this.danhao = danhao;}
 
-    public int getPay_price() { return pay_price;}
+    public double getPay_price() { return pay_price;}
 
-    public void setPay_price(int pay_price) { this.pay_price = pay_price;}
+    public void setPay_price(double pay_price) { this.pay_price = pay_price;}
 }
