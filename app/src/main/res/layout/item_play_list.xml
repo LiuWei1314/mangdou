@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:maxWidth="@dimen/x300"
         android:textColor="@color/text33"
         android:textSize="@dimen/text_size16"
         tools:text="第一集" />
