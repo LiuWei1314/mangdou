@@ -141,6 +141,14 @@ public static java.lang.String TABLENAME;
 -keepattributes Signature
 -keepattributes *Annotation*
 
+
+################gson################
+-keepattributes Signature
+-keepattributes *Annotation*
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.examples.android.model.** { *; }
+
+
 ################okhttp###############
 -keepattributes Signature
 -keepattributes *Annotation*
@@ -254,7 +262,10 @@ public static java.lang.String TABLENAME;
 # 自定义
 #
 #############################################
--keep class com.p609915198.basemodule.widget.**{*;}
+### 基类模块不混淆
+-keep class com.kemai.basemodule.**{ *; }
+-keepclassmembers class com.kemai.basemodule.**{ *; }
+-dontwarn com.kemai.basemodule.**
 
 #######微信支付
 -keep class com.tencent.mm.opensdk.** {*;}

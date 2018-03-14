@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_click"
+    android:paddingTop="@dimen/y20"
+    android:paddingBottom="@dimen/y20">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/x16"
+        android:maxWidth="@dimen/x300"
+        android:textColor="@color/text33"
+        android:textSize="@dimen/text_size16"
+        tools:text="第一集" />
+
+    <ImageView
+        android:id="@+id/iv_choose"
+        android:layout_width="@dimen/x18"
+        android:layout_height="@dimen/y16"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x16"
+        android:src="@drawable/ic_buy" />
+</RelativeLayout>
