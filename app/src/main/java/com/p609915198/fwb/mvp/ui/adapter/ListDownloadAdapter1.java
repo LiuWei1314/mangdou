@@ -15,6 +15,8 @@ import java.util.List;
  */
 public class ListDownloadAdapter1 extends BaseQuickAdapter<String, BaseViewHolder> {
     private int totalCount = 0;
+    private int selectPosition = 0;
+    private CallBack mCallBack;
 
     public ListDownloadAdapter1(@Nullable List<String> data, int totalCount) {
         super(R.layout.item_list_download_1, data);
@@ -30,8 +32,30 @@ public class ListDownloadAdapter1 extends BaseQuickAdapter<String, BaseViewHolde
 
     @Override
     protected void convert(BaseViewHolder helper, String item) {
-        int start = helper.getAdapterPosition() * 20 + 1;
-        int end = (helper.getAdapterPosition() + 1) * 20 > totalCount ? totalCount : (helper.getAdapterPosition() + 1) * 20;
-        helper.setText(R.id.tv, start + "~" + end);
+        helper.setText(R.id.tv, item);
+
+        if (selectPosition == helper.getLayoutPosition()) {
+            helper.setTextColor(R.id.tv, mContext.getResources().getColor(R.color.white))
+                  .setBackgroundColor(R.id.tv, mContext.getResources().getColor(R.color.main_color));
+        } else {
+            helper.setTextColor(R.id.tv, mContext.getResources().getColor(R.color.text33))
+                  .setBackgroundColor(R.id.tv, mContext.getResources().getColor(R.color.white));
+        }
+
+        helper.setOnClickListener(R.id.tv, v -> {
+            selectPosition = helper.getLayoutPosition();
+            notifyDataSetChanged();
+            if (null != mCallBack) {
+                mCallBack.select(selectPosition);
+            }
+        });
+    }
+
+    public void setCallBack(CallBack callBack) {
+        mCallBack = callBack;
+    }
+
+    public interface CallBack {
+        void select(int position);
     }
 }
