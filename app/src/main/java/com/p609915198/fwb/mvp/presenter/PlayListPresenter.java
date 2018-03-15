@@ -57,21 +57,24 @@ public class PlayListPresenter extends BasePresenter<PlayListContract.Model, Pla
                           protected void onNext(List<Audio> audioRespons) {
                               if (!audioRespons.isEmpty()) {
                                   mRootView.setTotalNum(audioRespons.get(0).getAudio_sum());
-                              }
 
-                              mPlayListAdapter.loadMoreEnd();
-                              if (!audioRespons.isEmpty()) {
                                   for (Audio au : audioRespons) {
                                       au.setUsername(data.getUser_name());
                                       au.setUrl(data.getRoom_cover());
                                   }
                                   mAudios.addAll(audioRespons);
-                                  mPlayListAdapter.notifyDataSetChanged();
 
                                   currentPage++;
+                                  mPlayListAdapter.loadMoreComplete();
                               } else {
                                   mRootView.showToast("已经到最后一页了！");
+                                  mPlayListAdapter.loadMoreEnd();
                               }
+                          }
+
+                          @Override
+                          public void onError(Throwable e) {
+                              mPlayListAdapter.loadMoreFail();
                           }
                       },
                       mRootView.getActivityImpl(),

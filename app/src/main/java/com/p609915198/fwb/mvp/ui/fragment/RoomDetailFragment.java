@@ -73,11 +73,9 @@ public class RoomDetailFragment extends BaseFragment<RoomDetailPresenter> implem
         }
     }
 
-    @OnClick({R.id.tv_subscribe, R.id.tv_common})
+    @OnClick({R.id.tv_common})
     public void onViewClicked(View view) {
         switch (view.getId()) {
-            case R.id.tv_subscribe:
-                break;
             case R.id.tv_common:
                 break;
         }

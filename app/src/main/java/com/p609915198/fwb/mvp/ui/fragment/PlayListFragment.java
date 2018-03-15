@@ -84,7 +84,7 @@ public class PlayListFragment extends BaseFragment<PlayListPresenter> implements
 
     @Override
     public void setTotalNum(int num) {
-        mTvTotalNum.setText(String.valueOf(num));
+        mTvTotalNum.setText("共" + num + "集");
     }
 
     @Override

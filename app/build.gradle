@@ -39,7 +39,7 @@ android {
         release {
             // debug log 打印配置
             buildConfigField "boolean", "LOG_DEBUG", "true"
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

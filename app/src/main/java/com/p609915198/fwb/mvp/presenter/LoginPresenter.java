@@ -43,5 +43,4 @@ public class LoginPresenter extends BasePresenter<LoginContract.Model, LoginCont
 
     public void wxLogin() {
     }
-
 }

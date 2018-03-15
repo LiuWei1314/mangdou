@@ -79,13 +79,17 @@ public class AppConfig {
      * @param toLoginActivity 是否跳转到LoginActivity
      */
     public static boolean isLogin(boolean toLoginActivity) {
-        if (toLoginActivity) {
-            Activity activity = ActivityUtils.getTopActivity();
-            if (null != activity) {
-                activity.startActivity(new Intent(activity, LoginActivity.class));
+        if (!TextUtils.isEmpty(getUserId())) {
+            return true;
+        } else {
+            if (toLoginActivity) {
+                Activity activity = ActivityUtils.getTopActivity();
+                if (null != activity) {
+                    activity.startActivity(new Intent(activity, LoginActivity.class));
+                }
             }
+            return false;
         }
-        return !TextUtils.isEmpty(getUserId());
     }
 
     public static List<Audio> getAudioCache() {
