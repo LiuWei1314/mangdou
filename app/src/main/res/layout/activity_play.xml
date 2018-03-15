@@ -11,25 +11,22 @@
 
     <ImageView
         android:id="@+id/iv"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/y10"
-        android:scaleType="fitXY" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop" />
 
     <com.liulishuo.magicprogresswidget.MagicProgressBar
         android:id="@+id/progress_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/y3"
-        android:layout_marginTop="@dimen/y10"
         app:mpb_background_color="@color/textC7"
         app:mpb_fill_color="@color/main_text_selected" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/y10"
         android:layout_marginTop="@dimen/y15"
+        android:layout_marginBottom="@dimen/y10"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -91,8 +88,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/y20"
         android:layout_marginTop="@dimen/y20"
+        android:layout_marginBottom="@dimen/y20"
         android:paddingLeft="@dimen/x10"
         android:paddingRight="@dimen/x10">
 
@@ -170,9 +167,9 @@
         android:id="@+id/tv_play_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/y20"
         android:layout_marginLeft="@dimen/x14"
         android:layout_marginTop="@dimen/y10"
+        android:layout_marginBottom="@dimen/y20"
         android:textColor="@color/text99"
         android:textSize="@dimen/text_size10"
         tools:text="2015-01-14" />

@@ -71,29 +71,7 @@
                 android:textColor="@color/text99"
                 android:textSize="@dimen/text_size10"
                 tools:text="被20万人关注" />
-
-            <TextView
-                android:id="@+id/tv_subscribe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:drawablePadding="@dimen/x3"
-                android:drawableTop="@mipmap/ic_subcribe_room_detail"
-                android:gravity="center"
-                android:text="关注"
-                android:textColor="@color/main_text_selected"
-                android:textSize="@dimen/text_size10" />
         </RelativeLayout>
-
-        <!--<TextView-->
-        <!--android:id="@+id/tv_introduce_2"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="@dimen/y18"-->
-        <!--android:textColor="@color/text66"-->
-        <!--android:textSize="@dimen/text_size14"-->
-        <!--tools:text="朴树声音日记之音乐赏析朴树声" />-->
 
         <RelativeLayout
             android:layout_width="match_parent"

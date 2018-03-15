@@ -63,8 +63,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/x40"
-        android:layout_marginRight="@dimen/x40"
         android:layout_marginTop="@dimen/y10"
+        android:layout_marginRight="@dimen/x40"
         android:gravity="center"
         android:textColor="@color/text66"
         android:textSize="@dimen/text_size14"
@@ -80,8 +80,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/y10"
         android:layout_marginTop="@dimen/y10"
+        android:layout_marginBottom="@dimen/y10"
         android:text="作品详情"
         android:textColor="@color/main_color"
         android:textSize="@dimen/text_size14" />
@@ -105,17 +105,6 @@
             android:text="专辑"
             android:textColor="@color/text4A"
             android:textSize="@dimen/text_size16" />
-
-        <!--<TextView
-            android:id="@+id/tv_more"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/x12"
-            android:text="更多"
-            android:textColor="@color/text7F"
-            android:textSize="@dimen/text_size14" />-->
     </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
