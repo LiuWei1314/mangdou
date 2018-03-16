@@ -9,11 +9,32 @@
 
     <include layout="@layout/view_title" />
 
-    <ImageView
-        android:id="@+id/iv"
+    <com.zhy.autolayout.AutoFrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerCrop" />
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:src="@mipmap/ic_reward" />
+
+        <ImageView
+            android:id="@+id/iv_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="@dimen/y30"
+            android:layout_marginRight="@dimen/x15"
+            android:src="@mipmap/ic_gift" />
+    </com.zhy.autolayout.AutoFrameLayout>
 
     <com.liulishuo.magicprogresswidget.MagicProgressBar
         android:id="@+id/progress_bar"
@@ -25,8 +46,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/y15"
         android:layout_marginBottom="@dimen/y10"
+        android:layout_marginTop="@dimen/y15"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -88,8 +109,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/y20"
         android:layout_marginBottom="@dimen/y20"
+        android:layout_marginTop="@dimen/y20"
         android:paddingLeft="@dimen/x10"
         android:paddingRight="@dimen/x10">
 
@@ -167,9 +188,9 @@
         android:id="@+id/tv_play_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y20"
         android:layout_marginLeft="@dimen/x14"
         android:layout_marginTop="@dimen/y10"
-        android:layout_marginBottom="@dimen/y20"
         android:textColor="@color/text99"
         android:textSize="@dimen/text_size10"
         tools:text="2015-01-14" />

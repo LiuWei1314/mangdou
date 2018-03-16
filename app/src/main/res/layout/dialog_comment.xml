@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/et_comments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:hint="请发表评论"
+        android:textColor="@color/text33"
+        android:textColorHint="@color/text99" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/y40"
+        android:layout_margin="5dp"
+        android:background="@drawable/shape_item_already_buy_comments"
+        android:text="确定"
+        android:textColor="@color/white" />
+</com.zhy.autolayout.AutoLinearLayout>
