@@ -74,7 +74,7 @@ public class UrlConstant {
     public static final String POST_REPLY = "post_reply.php";
     public static final String REPLY_LIST = "reply_list.php";
     public static final String SUBCRIBE_ROOM = "subcribe_room.php";
-    public static final String GIVE_GIFT = "give_gift.php";
+    public static final String GIVE_GIFT_NEW = "give_gift_new.php";
     public static final String LONG_RECOMMENT = "long_recomment.php";
     public static final String AUDIO_LIST = "audio_list.php";
     public static final String AUDIO_DETAIL = "audio_detail.php";

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -21,7 +22,6 @@ import com.p609915198.fwb.mvp.contract.MineContract;
 import com.p609915198.fwb.mvp.di.component.DaggerMineComponent;
 import com.p609915198.fwb.mvp.di.module.MineModule;
 import com.p609915198.fwb.mvp.presenter.MinePresenter;
-import com.p609915198.fwb.mvp.ui.activity.AlreadyBuyActivity;
 import com.p609915198.fwb.mvp.ui.activity.FeedBackActivity;
 import com.p609915198.fwb.mvp.ui.activity.GeneralSettingsActivity;
 import com.p609915198.fwb.mvp.ui.activity.GiftActivity;
@@ -38,7 +38,6 @@ import org.greenrobot.eventbus.Subscribe;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * Created by mark.liu on 2017-9-12.
@@ -54,11 +53,14 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
     @BindView(R.id.tv_history) TextView mTvHistory;
     @BindView(R.id.tv_subscribe) TextView mTvSubscribe;
     @BindView(R.id.tv_download) TextView mTvDownload;
-    @BindView(R.id.tv_3) TextView mTv3;
-    @BindView(R.id.tv_4) TextView mTv4;
-    @BindView(R.id.tv_5) TextView mTv5;
-    @BindView(R.id.tv_9) TextView mTv9;
-    Unbinder unbinder;
+    @BindView(R.id.ll_login) LinearLayout llLogin;
+    @BindView(R.id.tv_3) TextView tv3;
+    @BindView(R.id.tv_5) TextView tv5;
+    @BindView(R.id.tv_6_1) TextView tv61;
+    @BindView(R.id.tv_6_2) TextView tv62;
+    @BindView(R.id.tv_7) TextView tv7;
+    @BindView(R.id.tv_8) TextView tv8;
+    @BindView(R.id.tv_9) TextView tv9;
 
     public static MineFragment newInstance() {
         Bundle args = new Bundle();
@@ -99,7 +101,7 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
         }
     }
 
-    @OnClick({R.id.tv_subscribe})
+    @OnClick({R.id.tv_subscribe, R.id.tv_history, R.id.tv_download})
     public void mySubscribe(View view) {
         switch (view.getId()) {
             case R.id.tv_subscribe:
@@ -122,7 +124,7 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
         }
     }
 
-    @OnClick({R.id.tv_3, R.id.tv_4, R.id.tv_5, R.id.tv_6_1, R.id.tv_6_2, R.id.tv_7, R.id.tv_8, R.id.tv_history})
+    @OnClick({R.id.tv_3, R.id.tv_5, R.id.tv_6_1, R.id.tv_6_2, R.id.tv_7, R.id.tv_8, R.id.tv_history})
     public void onViewClicked(View view) {
         if (view.getId() == R.id.tv_7) {
             new PhoneDialog(mActivity).show();
@@ -137,9 +139,9 @@ public class MineFragment extends BaseFragment<MinePresenter> implements MineCon
             case R.id.tv_3:
                 launchActivity(new Intent(mActivity, TitleActivity.class));
                 break;
-            case R.id.tv_4:
-                launchActivity(new Intent(mActivity, AlreadyBuyActivity.class));
-                break;
+//            case R.id.tv_4:
+//                launchActivity(new Intent(mActivity, AlreadyBuyActivity.class));
+//                break;
             case R.id.tv_5:
                 launchActivity(new Intent(mActivity, MyWalletActivity.class));
                 break;

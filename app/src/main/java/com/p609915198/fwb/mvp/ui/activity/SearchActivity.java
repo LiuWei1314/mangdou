@@ -50,6 +50,8 @@ public class SearchActivity extends BaseActivity<SearchPresenter> implements Sea
 
     @Override
     protected void initData() {
+        mTvCenter.setText("搜索");
+        mTvCenter.setVisibility(View.VISIBLE);
         mPresenter.initViews();
     }
 

@@ -5,11 +5,10 @@ import android.graphics.drawable.Drawable;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.widget.TextView;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.p609915198.basemodule.base.BaseAdapter;
 import com.p609915198.basemodule.net.Api;
 import com.p609915198.basemodule.net.ProgressSubscriber;
 import com.p609915198.basemodule.net.SubscriberOnNextListener;
@@ -18,26 +17,19 @@ import com.p609915198.basemodule.net.response.CategoryResponse;
 import com.p609915198.basemodule.net.response.SecondaryCategoryResponse;
 import com.p609915198.fwb.R;
 import com.p609915198.fwb.mvp.ui.activity.RoomsMoreActivity;
-import com.zhy.autolayout.utils.AutoUtils;
 
 import java.util.List;
 
 /**
  * Created by Administrator on 2017/9/19.
  */
-public class ClassifyMenuAdapter extends BaseQuickAdapter<CategoryResponse, BaseViewHolder> {
+public class ClassifyMenuAdapter extends BaseAdapter<CategoryResponse, BaseViewHolder> {
     public static final int[] icons = new int[]{R.mipmap.ic_book, R.mipmap.ic_bg};
     private Api api;
 
     public ClassifyMenuAdapter(@Nullable List<CategoryResponse> data, Api mApi) {
         super(R.layout.item_classify_menu, data);
         this.api = mApi;
-    }
-
-    @Override
-    protected BaseViewHolder createBaseViewHolder(View view) {
-        AutoUtils.auto(view);// 屏幕适配
-        return super.createBaseViewHolder(view);
     }
 
     @Override

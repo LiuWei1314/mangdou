@@ -20,6 +20,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
+ * 播放历史
  * Created by Administrator on 2018/2/6.
  */
 public class HistoryActivity extends BaseActivity<HistoryPresenter> implements HistoryContract.View {

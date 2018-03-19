@@ -54,7 +54,8 @@ public class HostPresenter extends BasePresenter<HostContract.Model, HostContrac
                                   switch (view.getId()) {
                                       case R.id.ll_more:
                                           Intent intent = new Intent(((BaseFragment) mRootView).getActivity(), AnchorMoreActivity.class);
-                                          intent.putExtra("AnchorListResponse", anchorListResponses.get(position));
+                                          intent.putExtra("labelId", anchorListResponses.get(position).getLabelid());
+                                          intent.putExtra("label", anchorListResponses.get(position).getLabel());
                                           mRootView.launchActivity(intent);
                                           break;
                                   }

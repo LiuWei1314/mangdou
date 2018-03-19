@@ -1,19 +1,17 @@
 package com.p609915198.fwb.mvp.ui.adapter;
 
 import android.support.annotation.Nullable;
-import android.view.View;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.p609915198.basemodule.base.BaseAdapter;
 import com.p609915198.fwb.R;
-import com.zhy.autolayout.utils.AutoUtils;
 
 import java.util.List;
 
 /**
  * Created by Administrator on 2018/3/9.
  */
-public class ListDownloadAdapter1 extends BaseQuickAdapter<String, BaseViewHolder> {
+public class ListDownloadAdapter1 extends BaseAdapter<String, BaseViewHolder> {
     private int totalCount = 0;
     private int selectPosition = 0;
     private CallBack mCallBack;
@@ -22,12 +20,6 @@ public class ListDownloadAdapter1 extends BaseQuickAdapter<String, BaseViewHolde
         super(R.layout.item_list_download_1, data);
 
         this.totalCount = totalCount;
-    }
-
-    @Override
-    protected BaseViewHolder createBaseViewHolder(View view) {
-        AutoUtils.auto(view);// 屏幕适配
-        return super.createBaseViewHolder(view);
     }
 
     @Override

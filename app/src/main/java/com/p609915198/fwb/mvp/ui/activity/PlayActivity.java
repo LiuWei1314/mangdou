@@ -12,9 +12,11 @@ import com.liulishuo.magicprogresswidget.MagicProgressBar;
 import com.p609915198.basemodule.base.BaseActivity;
 import com.p609915198.basemodule.di.component.BaseComponent;
 import com.p609915198.basemodule.net.Api;
+import com.p609915198.basemodule.net.HttpResult;
 import com.p609915198.basemodule.net.ProgressSubscriber;
 import com.p609915198.basemodule.net.SubscriberOnNextListener;
 import com.p609915198.basemodule.net.UrlConstant;
+import com.p609915198.basemodule.net.request.GiveGiftRequest;
 import com.p609915198.basemodule.net.response.Audio;
 import com.p609915198.basemodule.net.response.GiftListResponse;
 import com.p609915198.basemodule.net.response.RoomDetailResponse;
@@ -171,8 +173,28 @@ public class PlayActivity extends BaseActivity<PlayPresenter> implements PlayCon
                     new SubscriberOnNextListener<List<GiftListResponse>>() {
                         @Override
                         protected void onNext(List<GiftListResponse> result) {
-                            GiftDialog dialog = GiftDialog.newInstance((ArrayList<GiftListResponse>) result);
-                            dialog.show();
+                            GiftDialog dialog = GiftDialog.newInstance((ArrayList<GiftListResponse>) result, (num, data) -> giftNew(num, data));
+                            dialog.setDimAmount(0.4F);
+                            dialog.show(getSupportFragmentManager());
+                        }
+                    }, this
+            ));
+    }
+
+    public void giftNew(int num, GiftListResponse data) {
+        GiveGiftRequest request = new GiveGiftRequest();
+        request.setCount(num);
+        request.setGift_id(data.getGift_id());
+        request.setRoom_id(mRoomId);
+        request.setUser_id(AppConfig.getUserId());
+        request.setAudio_set(mAudio.getAudio_set());
+        mApi.giveGift(request)
+            .compose(RxUtils.bindToLifecycle(this))
+            .subscribe(new ProgressSubscriber(
+                    new SubscriberOnNextListener<HttpResult>() {
+                        @Override
+                        protected void onNext(HttpResult result) {
+
                         }
                     }, this
             ));

@@ -18,7 +18,7 @@ public class GiftListResponse implements Parcelable {
     private String gift_cover;
     private String gift_name;
     private String gift_id;
-    private String gift_price;
+    private double gift_price;
 
     public String getGift_cover() { return gift_cover;}
 
@@ -32,9 +32,13 @@ public class GiftListResponse implements Parcelable {
 
     public void setGift_id(String gift_id) { this.gift_id = gift_id;}
 
-    public String getGift_price() { return gift_price;}
+    public double getGift_price() {
+        return gift_price;
+    }
 
-    public void setGift_price(String gift_price) { this.gift_price = gift_price;}
+    public void setGift_price(double gift_price) {
+        this.gift_price = gift_price;
+    }
 
     @Override
     public int describeContents() { return 0; }
@@ -44,7 +48,7 @@ public class GiftListResponse implements Parcelable {
         dest.writeString(this.gift_cover);
         dest.writeString(this.gift_name);
         dest.writeString(this.gift_id);
-        dest.writeString(this.gift_price);
+        dest.writeDouble(this.gift_price);
     }
 
     public GiftListResponse() {}
@@ -53,7 +57,7 @@ public class GiftListResponse implements Parcelable {
         this.gift_cover = in.readString();
         this.gift_name = in.readString();
         this.gift_id = in.readString();
-        this.gift_price = in.readString();
+        this.gift_price = in.readDouble();
     }
 
     public static final Parcelable.Creator<GiftListResponse> CREATOR = new Parcelable.Creator<GiftListResponse>() {

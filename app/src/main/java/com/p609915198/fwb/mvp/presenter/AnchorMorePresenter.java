@@ -4,10 +4,8 @@ import android.content.Intent;
 
 import com.p609915198.basemodule.base.BasePresenter;
 import com.p609915198.basemodule.di.scope.ActivityScope;
-import com.p609915198.basemodule.net.HttpResult;
 import com.p609915198.basemodule.net.ProgressSubscriber;
 import com.p609915198.basemodule.net.SubscriberOnNextListener;
-import com.p609915198.basemodule.net.response.AnchorListResponse;
 import com.p609915198.basemodule.net.response.AnchorMoreResponse;
 import com.p609915198.basemodule.utils.RxUtils;
 import com.p609915198.fwb.R;
@@ -32,8 +30,8 @@ public class AnchorMorePresenter extends BasePresenter<AnchorMoreContract.Model,
         super(model, rootView);
     }
 
-    public void initData(AnchorListResponse data) {
-        mModel.anchorMore(data.getLabelid())
+    public void initData(String labelId, String label) {
+        mModel.anchorMore(labelId)
               .compose(RxUtils.bindToLifecycle(mRootView))
               .subscribe(new ProgressSubscriber<>(
                       new SubscriberOnNextListener<List<AnchorMoreResponse>>() {
@@ -51,7 +49,7 @@ public class AnchorMorePresenter extends BasePresenter<AnchorMoreContract.Model,
                                       case R.id.tv_subscribe:
                                           // 订阅
                                           if (AppConfig.isLogin()) {
-                                              subscribe(anchorMoreResponses.get(position));
+
                                           } else {
                                               mRootView.showToast("请先登录！");
                                           }
@@ -65,8 +63,8 @@ public class AnchorMorePresenter extends BasePresenter<AnchorMoreContract.Model,
               ));
     }
 
-    public void subscribe(AnchorMoreResponse data) {
-        mModel.subscribe(data)
+    public void subscribe() {
+      /*  mModel.subscribe()
               .compose(RxUtils.bindToLifecycle(mRootView))
               .subscribe(new ProgressSubscriber<>(
                       new SubscriberOnNextListener<HttpResult>() {
@@ -80,6 +78,6 @@ public class AnchorMorePresenter extends BasePresenter<AnchorMoreContract.Model,
                           }
                       },
                       mRootView.getActivity()
-              ));
+              ));*/
     }
 }

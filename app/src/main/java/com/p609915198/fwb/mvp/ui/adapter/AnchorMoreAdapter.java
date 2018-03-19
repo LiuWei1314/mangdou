@@ -1,26 +1,18 @@
 package com.p609915198.fwb.mvp.ui.adapter;
 
 import android.support.annotation.Nullable;
-import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.p609915198.basemodule.base.BaseAdapter;
 import com.p609915198.basemodule.net.UrlConstant;
 import com.p609915198.basemodule.net.response.AnchorMoreResponse;
 import com.p609915198.fwb.R;
-import com.zhy.autolayout.utils.AutoUtils;
 
 import java.util.List;
 
-public class AnchorMoreAdapter extends BaseQuickAdapter<AnchorMoreResponse, BaseViewHolder> {
-
-    @Override
-    protected BaseViewHolder createBaseViewHolder(View view) {
-        AutoUtils.auto(view);// 屏幕适配
-        return super.createBaseViewHolder(view);
-    }
+public class AnchorMoreAdapter extends BaseAdapter<AnchorMoreResponse, BaseViewHolder> {
 
     public AnchorMoreAdapter(@Nullable List<AnchorMoreResponse> data) {
         super(R.layout.item_anchor_more, data);

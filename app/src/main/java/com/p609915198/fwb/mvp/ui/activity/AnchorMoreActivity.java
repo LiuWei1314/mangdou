@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.p609915198.basemodule.base.BaseActivity;
 import com.p609915198.basemodule.di.component.BaseComponent;
-import com.p609915198.basemodule.net.response.AnchorListResponse;
 import com.p609915198.basemodule.widget.divider.DividerItemDecoration;
 import com.p609915198.fwb.R;
 import com.p609915198.fwb.mvp.contract.AnchorMoreContract;
@@ -32,7 +31,8 @@ public class AnchorMoreActivity extends BaseActivity<AnchorMorePresenter> implem
     @BindView(R.id.tv_right) TextView mTvRight;
     @BindView(R.id.rv) RecyclerView mRv;
 
-    private AnchorListResponse data;
+    private String labelId;
+    private String label;
 
     @Override
     protected void setupActivityComponent(BaseComponent baseComponent) {
@@ -51,12 +51,11 @@ public class AnchorMoreActivity extends BaseActivity<AnchorMorePresenter> implem
 
     @Override
     protected void initData() {
-        data = (AnchorListResponse) getIntent().getSerializableExtra("AnchorListResponse");
-        if (null != data) {
-            mTvCenter.setText(data.getLabel());
-            mTvCenter.setVisibility(View.VISIBLE);
-            mPresenter.initData(data);
-        }
+        labelId = getIntent().getStringExtra("labelId");
+        label = getIntent().getStringExtra("label");
+        mTvCenter.setText(label);
+        mTvCenter.setVisibility(View.VISIBLE);
+        mPresenter.initData(labelId, label);
     }
 
     @OnClick(R.id.tv_left)

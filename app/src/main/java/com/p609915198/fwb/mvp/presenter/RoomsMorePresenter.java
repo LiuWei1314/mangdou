@@ -38,17 +38,14 @@ public class RoomsMorePresenter extends BasePresenter<RoomsMoreContract.Model, R
     public void initData(String labelId) {
         mModel.roomsMore(labelId)
               .compose(RxUtils.bindToLifecycle(mRootView))
-              .map(new Function<HttpResult<List<RoomsMoreResponse>>, List<RoomsMoreResponse>>() {
-                  @Override
-                  public List<RoomsMoreResponse> apply(HttpResult<List<RoomsMoreResponse>> listHttpResult) throws Exception {
-                      if (listHttpResult.getCode() != 200) {
-                          throw new ApiException(listHttpResult.getMsg());
-                      }
-                      if (null != listHttpResult.getAd() && !TextUtils.isEmpty(listHttpResult.getAd().getSelf_ad())) {
-                          mRootView.setAdHeaderView(listHttpResult.getAd());
-                      }
-                      return listHttpResult.getResult();
+              .map((Function<HttpResult<List<RoomsMoreResponse>>, List<RoomsMoreResponse>>) listHttpResult -> {
+                  if (listHttpResult.getCode() != 200) {
+                      throw new ApiException(listHttpResult.getMsg());
                   }
+                  if (null != listHttpResult.getAd() && !TextUtils.isEmpty(listHttpResult.getAd().getSelf_ad())) {
+                      mRootView.setAdHeaderView(listHttpResult.getAd());
+                  }
+                  return listHttpResult.getResult();
               })
               .subscribe(new ProgressSubscriber<>(
                       new SubscriberOnNextListener<List<RoomsMoreResponse>>() {

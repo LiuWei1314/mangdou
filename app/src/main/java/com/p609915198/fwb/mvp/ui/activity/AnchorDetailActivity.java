@@ -36,12 +36,9 @@ public class AnchorDetailActivity extends BaseActivity<AnchorDetailPresenter> im
     @BindView(R.id.tv_right) TextView tvRight;
     @BindView(R.id.civ_head) CircleImageView civHead;
     @BindView(R.id.tv_name) TextView tvName;
-    @BindView(R.id.tv_subscribe) TextView tvSubscribe;
-    @BindView(R.id.tv_fans) TextView tvFans;
     @BindView(R.id.tv_introduce) TextView tvIntroduce;
-    @BindView(R.id.rv) RecyclerView rv;
     @BindView(R.id.tv_zhuanji) TextView tvZhuanji;
-//    @BindView(R.id.tv_more) TextView tvMore;
+    @BindView(R.id.rv) RecyclerView rv;
 
     private AnchorListResponse.DataBean mDataBean;
 

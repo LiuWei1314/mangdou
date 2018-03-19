@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.p609915198.basemodule.base.BaseAdapter;
 import com.p609915198.basemodule.net.UrlConstant;
 import com.p609915198.basemodule.net.response.AnchorListResponse;
 import com.p609915198.fwb.R;
@@ -20,21 +21,15 @@ import java.util.List;
 /**
  * Created by mark.liu on 2017-9-22.
  */
-public class HostAdapter extends BaseQuickAdapter<AnchorListResponse, BaseViewHolder> {
+public class HostAdapter extends BaseAdapter<AnchorListResponse, BaseViewHolder> {
     public HostAdapter(@Nullable List<AnchorListResponse> data) {
         super(R.layout.item_works, data);
     }
 
     @Override
-    protected BaseViewHolder createBaseViewHolder(View view) {
-        AutoUtils.auto(view);// 屏幕适配
-        return super.createBaseViewHolder(view);
-    }
-
-    @Override
     protected void convert(BaseViewHolder helper, AnchorListResponse item) {
         helper.setText(R.id.tv_left, item.getLabel())
-                .addOnClickListener(R.id.ll_more);
+              .addOnClickListener(R.id.ll_more);
 //                .addOnClickListener(R.id.tv_replace);
 
         RecyclerView recyclerView = helper.getView(R.id.rv);

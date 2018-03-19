@@ -4,7 +4,6 @@ import android.app.Activity;
 
 import com.p609915198.basemodule.base.IModel;
 import com.p609915198.basemodule.base.IView;
-import com.p609915198.basemodule.net.HttpResult;
 import com.p609915198.basemodule.net.response.AnchorMoreResponse;
 import com.p609915198.fwb.mvp.ui.adapter.AnchorMoreAdapter;
 
@@ -26,7 +25,5 @@ public interface AnchorMoreContract {
     //Model层定义接口,外部只需关心model返回的数据,无需关心内部细节,及是否使用缓存
     interface Model extends IModel {
         Observable<List<AnchorMoreResponse>> anchorMore(String id);
-
-        Observable<HttpResult> subscribe(AnchorMoreResponse response);
     }
 }

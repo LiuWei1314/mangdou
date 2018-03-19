@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.p609915198.basemodule.base.BaseAdapter;
 import com.p609915198.basemodule.net.UrlConstant;
 import com.p609915198.basemodule.net.response.RoomsListResponse;
 import com.p609915198.fwb.R;
@@ -21,16 +22,10 @@ import java.util.List;
 /**
  * Created by mark.liu on 2017-9-13.
  */
-public class HotAdapter extends BaseQuickAdapter<RoomsListResponse, BaseViewHolder> {
+public class HotAdapter extends BaseAdapter<RoomsListResponse, BaseViewHolder> {
 
     public HotAdapter(List<RoomsListResponse> data) {
         super(R.layout.item_works, data);
-    }
-
-    @Override
-    protected BaseViewHolder createBaseViewHolder(View view) {
-        AutoUtils.auto(view);// 屏幕适配
-        return super.createBaseViewHolder(view);
     }
 
     @Override

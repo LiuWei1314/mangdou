@@ -4,15 +4,15 @@ import android.support.annotation.Nullable;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.p609915198.basemodule.base.BaseAdapter;
 import com.p609915198.basemodule.net.UrlConstant;
 import com.p609915198.basemodule.net.response.RoomsMoreResponse;
 import com.p609915198.fwb.R;
 
 import java.util.List;
 
-public class RoomsMoreAdapter extends BaseQuickAdapter<RoomsMoreResponse, BaseViewHolder> {
+public class RoomsMoreAdapter extends BaseAdapter<RoomsMoreResponse, BaseViewHolder> {
 
     public RoomsMoreAdapter(@Nullable List<RoomsMoreResponse> data) {
         super(R.layout.item_rooms_more, data);

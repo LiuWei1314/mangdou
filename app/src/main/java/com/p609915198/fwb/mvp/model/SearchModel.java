@@ -26,6 +26,6 @@ public class SearchModel extends BaseModel implements SearchContract.Model {
 
     @Override
     public Observable<List<SearchResponse>> search(String content) {
-        return mApi.search(content);
+        return null;
     }
 }

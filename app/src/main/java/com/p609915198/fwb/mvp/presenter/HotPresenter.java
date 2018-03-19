@@ -45,33 +45,31 @@ public class HotPresenter extends BasePresenter<HotContract.Model, HotContract.V
 
     public void initView(int labelType) {
         mModel.getData(labelType)
-                .subscribe(new ProgressSubscriber<>(
-                        new SubscriberOnNextListener<List<RoomsListResponse>>() {
-                            @Override
-                            protected void onNext(List<RoomsListResponse> roomsListResponses) {
-                                HotAdapter mHotAdapter = new HotAdapter(roomsListResponses);
-                                mHotAdapter.setClickListener(HotPresenter.this::clickListener);
-                                mHotAdapter.setOnItemChildClickListener(
-                                        (adapter, view, position) -> {
-                                            switch (view.getId()) {
-                                                case R.id.ll_more:
-                                                    Intent intent = new Intent(((BaseFragment) mRootView).getActivity(), RoomsMoreActivity.class);
-                                                    intent.putExtra("labelId", roomsListResponses.get(position).getLabelid());
-                                                    intent.putExtra("label", roomsListResponses.get(position).getLabel());
-                                                    mRootView.launchActivity(intent);
-                                                    break;
-//                                              case R.id.tv_replace:
-//                                                  break;
-                                                default:
-                                                    break;
-                                            }
-                                        });
-                                mRootView.setAdapter(mHotAdapter);
-                            }
-                        },
-                        ((BaseFragment) mRootView).getActivity(),
-                        false
-                ));
+              .subscribe(new ProgressSubscriber<>(
+                      new SubscriberOnNextListener<List<RoomsListResponse>>() {
+                          @Override
+                          protected void onNext(List<RoomsListResponse> roomsListResponses) {
+                              HotAdapter mHotAdapter = new HotAdapter(roomsListResponses);
+                              mHotAdapter.setClickListener(HotPresenter.this::clickListener);
+                              mHotAdapter.setOnItemChildClickListener(
+                                      (adapter, view, position) -> {
+                                          switch (view.getId()) {
+                                              case R.id.ll_more:
+                                                  Intent intent = new Intent(((BaseFragment) mRootView).getActivity(), RoomsMoreActivity.class);
+                                                  intent.putExtra("labelId", roomsListResponses.get(position).getLabelid());
+                                                  intent.putExtra("label", roomsListResponses.get(position).getLabel());
+                                                  mRootView.launchActivity(intent);
+                                                  break;
+                                              default:
+                                                  break;
+                                          }
+                                      });
+                              mRootView.setAdapter(mHotAdapter);
+                          }
+                      },
+                      ((BaseFragment) mRootView).getActivity(),
+                      false
+              ));
     }
 
     public void initFooterAd(int position) {
