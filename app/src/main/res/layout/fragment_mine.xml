@@ -212,22 +212,22 @@
             android:textColor="@color/text33"
             android:textSize="@dimen/text_size16" />
 
-        <TextView
-            android:id="@+id/tv_4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/selector_click"
-            android:drawableLeft="@mipmap/ic_mine_img4"
-            android:drawablePadding="16dp"
-            android:drawableRight="@mipmap/ic_right"
-            android:gravity="center_vertical"
-            android:paddingBottom="@dimen/y15"
-            android:paddingLeft="@dimen/x18"
-            android:paddingRight="@dimen/x16"
-            android:paddingTop="@dimen/y15"
-            android:text="@string/mine_tv4"
-            android:textColor="@color/text33"
-            android:textSize="@dimen/text_size16" />
+        <!--<TextView-->
+            <!--android:id="@+id/tv_4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/selector_click"-->
+            <!--android:drawableLeft="@mipmap/ic_mine_img4"-->
+            <!--android:drawablePadding="16dp"-->
+            <!--android:drawableRight="@mipmap/ic_right"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:paddingBottom="@dimen/y15"-->
+            <!--android:paddingLeft="@dimen/x18"-->
+            <!--android:paddingRight="@dimen/x16"-->
+            <!--android:paddingTop="@dimen/y15"-->
+            <!--android:text="@string/mine_tv4"-->
+            <!--android:textColor="@color/text33"-->
+            <!--android:textSize="@dimen/text_size16" />-->
 
         <TextView
             android:id="@+id/tv_5"

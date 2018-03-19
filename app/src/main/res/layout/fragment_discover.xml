@@ -20,22 +20,22 @@
             android:textSize="@dimen/text_size30" />
 
         <!--<ImageView-->
-            <!--android:id="@+id/iv_email"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_marginRight="@dimen/x30"-->
-            <!--android:layout_toLeftOf="@id/iv_search"-->
-            <!--android:src="@mipmap/ic_listen_message" />-->
+        <!--android:id="@+id/iv_email"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="@dimen/x30"-->
+        <!--android:layout_toLeftOf="@id/iv_search"-->
+        <!--android:src="@mipmap/ic_listen_message" />-->
 
         <!--<ImageView-->
-            <!--android:id="@+id/iv_search"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_marginRight="@dimen/x20"-->
-            <!--android:src="@mipmap/ic_listen_search" />-->
+        <!--android:id="@+id/iv_search"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="@dimen/x20"-->
+        <!--android:src="@mipmap/ic_listen_search" />-->
     </RelativeLayout>
 
     <TextView
@@ -43,11 +43,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/x19"
-        android:layout_marginRight="@dimen/x19"
         android:layout_marginTop="@dimen/y44"
+        android:layout_marginRight="@dimen/x19"
         android:drawableLeft="@mipmap/ic_hot_sale"
-        android:drawablePadding="@dimen/x15"
         android:drawableRight="@mipmap/ic_right"
+        android:drawablePadding="@dimen/x15"
         android:gravity="center_vertical"
         android:text="热卖新品"
         android:textColor="@color/text33"
@@ -58,28 +58,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/x19"
-        android:layout_marginRight="@dimen/x19"
         android:layout_marginTop="@dimen/y42"
+        android:layout_marginRight="@dimen/x19"
         android:drawableLeft="@mipmap/ic_famouse"
-        android:drawablePadding="@dimen/x15"
         android:drawableRight="@mipmap/ic_right"
+        android:drawablePadding="@dimen/x15"
         android:gravity="center_vertical"
         android:text="大咖主播"
-        android:textColor="@color/text33"
-        android:textSize="@dimen/text_size16" />
-
-    <TextView
-        android:id="@+id/tv_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/x19"
-        android:layout_marginRight="@dimen/x19"
-        android:layout_marginTop="@dimen/y42"
-        android:drawableLeft="@mipmap/ic_activity"
-        android:drawablePadding="@dimen/x15"
-        android:drawableRight="@mipmap/ic_right"
-        android:gravity="center_vertical"
-        android:text="活动"
         android:textColor="@color/text33"
         android:textSize="@dimen/text_size16" />
 </LinearLayout>

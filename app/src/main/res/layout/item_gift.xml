@@ -18,7 +18,7 @@
         android:id="@+id/tv_gift_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/y8"
+        android:layout_marginTop="@dimen/y4"
         android:textColor="@color/text66"
         android:textSize="@dimen/text_size12"
         tools:text="红玫瑰" />
@@ -27,8 +27,8 @@
         android:id="@+id/tv_gift_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/y20"
-        android:layout_marginTop="@dimen/y5"
+        android:layout_marginTop="@dimen/y4"
+        android:layout_marginBottom="@dimen/y10"
         android:textColor="@color/main_color"
         android:textSize="@dimen/text_size10"
         tools:text="红玫瑰" />
