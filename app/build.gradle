@@ -42,9 +42,20 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+        //打包重命名
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "忙豆听书${defaultConfig.versionName}_${releaseTime()}.apk"
+            }
+        }
     }
 }
 
+//获取时间
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')

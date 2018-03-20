@@ -73,4 +73,24 @@
         <item>30</item>
         <item>40</item>
     </integer-array>
+
+    <string-array name="question_text">
+        <item>账号问题</item>
+        <item>付费问题</item>
+        <item>播放问题</item>
+        <item>主播问题</item>
+        <item>称号问题</item>
+        <item>软件问题</item>
+        <item>其他问题</item>
+    </string-array>
+
+    <integer-array name="question_int">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </integer-array>
 </resources>
