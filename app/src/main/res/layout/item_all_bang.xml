@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/y8"
+    android:paddingBottom="@dimen/y8">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="@dimen/x40"
+        android:layout_height="@dimen/y30"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text66"
+            android:textSize="@dimen/text_size16"
+            tools:text="1" />
+
+        <ImageView
+            android:id="@+id/iv_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_first"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.p609915198.basemodule.widget.CircleImageView
+        android:id="@+id/civ_head"
+        android:layout_width="@dimen/x40"
+        android:layout_height="@dimen/y40"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAllCaps="false"
+        android:textColor="@color/text33"
+        android:textSize="@dimen/text_size14"
+        tools:text="皮皮虾" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/x10"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="@dimen/text_size14"
+        tools:text="19999" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/x10"
+        android:src="@mipmap/ic_read_heart" />
+</LinearLayout>
