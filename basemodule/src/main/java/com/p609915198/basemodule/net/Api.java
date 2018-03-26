@@ -24,6 +24,7 @@ import com.p609915198.basemodule.net.request.RoomDetailRequest;
 import com.p609915198.basemodule.net.request.SecondaryCategoryRequest;
 import com.p609915198.basemodule.net.request.SecondaryRoomsRequest;
 import com.p609915198.basemodule.net.request.WithdrawRequest;
+import com.p609915198.basemodule.net.response.ZhuBoBangResponse;
 import com.p609915198.basemodule.utils.RxUtils;
 
 import io.reactivex.Observable;
@@ -171,7 +172,7 @@ public class Api {
 
     public Observable rankingList() { return mApiService.rankingList().compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
-    public Observable getPlayRecord(String userId) { return mApiService.getPlayRecord(userId).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
+    public Observable recordSearch(String userId) { return mApiService.recordSearch("http://www.liaoliaoy.com/listenbook/apis/audio/record_search.php", userId).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
     public Observable getWithdrawInfo(GetWithdrawInfoRequest request) { return mApiService.getWithdrawInfo(request).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
@@ -184,7 +185,7 @@ public class Api {
     public Observable subscribeRoom(String roomId, String userId) {return mApiService.subcribeRoom(roomId, userId).compose(RxUtils.ioMain()).map(new HttpResultFunc());}
 
     public Observable giveGift(String key) {
-        return mApiService.giveGift(key).compose(RxUtils.ioMain()).map(new HttpResultFunc());
+        return mApiService.giveGift(key).compose(RxUtils.ioMain());
     }
 
     public Observable longRecomment() { return mApiService.longRecomment().compose(RxUtils.ioMain()).map(new HttpResultFunc());}
@@ -217,5 +218,9 @@ public class Api {
 
     public Observable bang() {
         return mApiService.bang().compose(RxUtils.ioMain());
+    }
+
+    public Observable<ZhuBoBangResponse> zhuBoBang() {
+        return mApiService.zhuBoBang().compose(RxUtils.ioMain());
     }
 }

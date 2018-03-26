@@ -6,7 +6,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.p609915198.basemodule.net.response.RoomDetailResponse;
 import com.p609915198.fwb.R;
 
 import me.shaohui.bottomdialog.BaseBottomDialog;
@@ -15,23 +14,22 @@ import me.shaohui.bottomdialog.BaseBottomDialog;
  * Created by Administrator on 2018/1/8.
  */
 public class PayDialog extends BaseBottomDialog {
-    ImageView ivClose;
-    TextView tvMoney;
-    TextView tvBean;
-    ImageView ivAli;
-    ImageView ivAliPay;
-    ImageView ivWx;
-    ImageView ivWxPay;
-    Button btPay;
+    private ImageView ivClose;
+    private TextView tvMoney;
+    private TextView tvBean;
+    private ImageView ivAli;
+    private ImageView ivAliPay;
+    private ImageView ivWx;
+    private ImageView ivWxPay;
+    private Button btPay;
 
     private int payWay = 0;// 0 = 支付宝支付 | 1 = 微信支付
     private PayListener mPayListener;
-    private RoomDetailResponse mRoomDetailResponse;
     private double money;
 
-    public static PayDialog newInstance(RoomDetailResponse roomDetailResponse) {
+    public static PayDialog newInstance(double money) {
         Bundle args = new Bundle();
-        args.putSerializable("roomDetailResponse", roomDetailResponse);
+        args.putDouble("money", money);
         PayDialog fragment = new PayDialog();
         fragment.setArguments(args);
         return fragment;
@@ -61,12 +59,9 @@ public class PayDialog extends BaseBottomDialog {
     }
 
     private void initData() {
-        mRoomDetailResponse = (RoomDetailResponse) getArguments().getSerializable("roomDetailResponse");
-        if (null != mRoomDetailResponse) {
-            money = Double.valueOf(mRoomDetailResponse.getRoom_price());
-            tvMoney.setText("￥" + money + "元");
-            tvBean.setText(money + "忙豆");
-        }
+        money = getArguments().getDouble("money", 0);
+        tvMoney.setText("￥" + money + "元");
+        tvBean.setText(money + "忙豆");
     }
 
     private void initEvents() {

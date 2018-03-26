@@ -33,7 +33,6 @@ import com.p609915198.basemodule.net.response.BroadcastLiveResponse;
 import com.p609915198.basemodule.net.response.CategoryResponse;
 import com.p609915198.basemodule.net.response.ChargeResponse;
 import com.p609915198.basemodule.net.response.ClassicsRecommentResponse;
-import com.p609915198.basemodule.net.response.GetPlayRecordResponse;
 import com.p609915198.basemodule.net.response.GetWithdrawInfoResponse;
 import com.p609915198.basemodule.net.response.GiftListResponse;
 import com.p609915198.basemodule.net.response.GirlLoveResponse;
@@ -73,6 +72,7 @@ import com.p609915198.basemodule.net.response.SuperLiveResponse;
 import com.p609915198.basemodule.net.response.SuperStarResponse;
 import com.p609915198.basemodule.net.response.TopResponse;
 import com.p609915198.basemodule.net.response.UserBaseInfoResponse;
+import com.p609915198.basemodule.net.response.ZhuBoBangResponse;
 
 import java.util.List;
 
@@ -81,6 +81,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 import static com.p609915198.basemodule.net.UrlConstant.ADD_PLAY_RECORD;
 import static com.p609915198.basemodule.net.UrlConstant.ALREADY_BUY;
@@ -103,7 +104,6 @@ import static com.p609915198.basemodule.net.UrlConstant.CLASSICS_RECOMMENT;
 import static com.p609915198.basemodule.net.UrlConstant.CREATE_ROOM;
 import static com.p609915198.basemodule.net.UrlConstant.DELETE_ROOM;
 import static com.p609915198.basemodule.net.UrlConstant.FEEDBACK;
-import static com.p609915198.basemodule.net.UrlConstant.GET_PLAY_RECORD;
 import static com.p609915198.basemodule.net.UrlConstant.GET_WITHDRAW_INFO;
 import static com.p609915198.basemodule.net.UrlConstant.GIFT_LIST;
 import static com.p609915198.basemodule.net.UrlConstant.GIRL_LOVE;
@@ -155,6 +155,7 @@ import static com.p609915198.basemodule.net.UrlConstant.TOP;
 import static com.p609915198.basemodule.net.UrlConstant.TOPUP_NEW;
 import static com.p609915198.basemodule.net.UrlConstant.USER_BASE_INFO;
 import static com.p609915198.basemodule.net.UrlConstant.WITHDRAW;
+import static com.p609915198.basemodule.net.UrlConstant.ZHU_BO_BANG;
 
 public interface ApiService {
     @POST(ROOMS_MORE)
@@ -318,8 +319,8 @@ public interface ApiService {
     @POST(RANKING_LIST)
     Observable<HttpResult<List<RankingListResponse>>> rankingList();
 
-    @POST(GET_PLAY_RECORD)
-    Observable<HttpResult<List<GetPlayRecordResponse>>> getPlayRecord(@Query("user_id") String userId);
+    @POST
+    Observable<HttpResult> recordSearch(@Url String url, @Query("user_id") String userId);
 
     @POST(GET_WITHDRAW_INFO)
     Observable<HttpResult<List<GetWithdrawInfoResponse>>> getWithdrawInfo(@Body GetWithdrawInfoRequest request);
@@ -388,4 +389,7 @@ public interface ApiService {
 
     @POST(BANG)
     Observable<BangResponse> bang();
+
+    @POST(ZHU_BO_BANG)
+    Observable<ZhuBoBangResponse> zhuBoBang();
 }

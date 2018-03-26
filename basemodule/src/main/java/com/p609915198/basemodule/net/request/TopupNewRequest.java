@@ -5,10 +5,10 @@ package com.p609915198.basemodule.net.request;
  */
 public class TopupNewRequest {
     private String user_id;
-    private String volley;
+    private double volley;
     private String type;// 0=冲值|1=打赏|2=礼物
 
-    public TopupNewRequest(String user_id, String volley, String type) {
+    public TopupNewRequest(String user_id, double volley, String type) {
         this.user_id = user_id;
         this.volley = volley;
         this.type = type;
@@ -22,11 +22,11 @@ public class TopupNewRequest {
         this.user_id = user_id;
     }
 
-    public String getVolley() {
+    public double getVolley() {
         return volley;
     }
 
-    public void setVolley(String volley) {
+    public void setVolley(double volley) {
         this.volley = volley;
     }
 

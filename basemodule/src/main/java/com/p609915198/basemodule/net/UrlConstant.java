@@ -68,7 +68,7 @@ public class UrlConstant {
     public static final String GIFT_LIST = "gift_list.php";
     public static final String CLASSICS_RECOMMENT = "classics_recomment.php";
     public static final String RANKING_LIST = "ranking_list.php";
-    public static final String GET_PLAY_RECORD = "get_play_record.php";
+    public static final String RECORD_SEARCH = "record_search.php";
     public static final String GET_WITHDRAW_INFO = "get_withdraw_info.php";
     public static final String BOOK_ROOM = "book_room.php";
     public static final String POST_REPLY = "post_reply.php";
@@ -88,6 +88,7 @@ public class UrlConstant {
     public static final String PAY_WX = "weixin/example/app.php";
     public static final String APP_VERSION = "v2/public/app/version";
     public static final String BANG = "v2/public/bang";
+    public static final String ZHU_BO_BANG = "v2/public/zhubobang";
 
     /**
      * 巅峰称号

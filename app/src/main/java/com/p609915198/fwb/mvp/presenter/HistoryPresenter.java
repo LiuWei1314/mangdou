@@ -8,9 +8,7 @@ import com.p609915198.basemodule.di.scope.ActivityScope;
 import com.p609915198.basemodule.net.Api;
 import com.p609915198.basemodule.net.ProgressSubscriber;
 import com.p609915198.basemodule.net.SubscriberOnNextListener;
-import com.p609915198.basemodule.net.response.Audio;
-import com.p609915198.basemodule.net.response.GetPlayRecordResponse;
-import com.p609915198.basemodule.net.response.RoomDetailResponse;
+import com.p609915198.basemodule.net.response.RecordSearchResponse;
 import com.p609915198.basemodule.utils.RxUtils;
 import com.p609915198.fwb.app.AppConfig;
 import com.p609915198.fwb.mvp.contract.HistoryContract;
@@ -37,30 +35,21 @@ public class HistoryPresenter extends BasePresenter<HistoryContract.Model, Histo
     }
 
     public void initAdapter() {
-        mApi.getPlayRecord(AppConfig.getUserId())
+        mApi.recordSearch(AppConfig.getUserId())
             .compose(RxUtils.bindToLifecycle(mRootView))
             .subscribe(new ProgressSubscriber<>(
-                    new SubscriberOnNextListener<List<GetPlayRecordResponse>>() {
+                    new SubscriberOnNextListener<List<RecordSearchResponse>>() {
                         @Override
-                        protected void onNext(List<GetPlayRecordResponse> getPlayRecordResponses) {
-                            mHistoryAdapter = new HistoryAdapter(getPlayRecordResponses);
+                        protected void onNext(List<RecordSearchResponse> recordSearchRespons) {
+                            mHistoryAdapter = new HistoryAdapter(recordSearchRespons);
                             mHistoryAdapter.setOnItemChildClickListener((adapter, view, position) -> {
-                                GetPlayRecordResponse recordResponse = (GetPlayRecordResponse) adapter.getData().get(position);
+                                RecordSearchResponse recordResponse = (RecordSearchResponse) adapter.getData().get(position);
                                 String roomId = recordResponse.getRoom_id();
-                                List<Audio> audios = recordResponse.getPlay_record();
                                 Intent intent = new Intent((Activity) mRootView, PlayActivity.class);
                                 intent.putExtra("roomId", roomId);
-                                intent.putExtra("audioList", (ArrayList) audios);
-                                intent.putExtra("audio", audios.get(position));
-                                RoomDetailResponse roomDetailResponse = new RoomDetailResponse();
-                                roomDetailResponse.setRoom_blurcover(recordResponse.getRoom_blurcover());
-                                roomDetailResponse.setRoom_cover(recordResponse.getRoom_cover());
-                                roomDetailResponse.setRoom_frequency(recordResponse.getRoom_frequency());
-                                roomDetailResponse.setRoom_price(recordResponse.getRoom_price());
-                                roomDetailResponse.setRoom_name(recordResponse.getRoom_name());
-                                roomDetailResponse.setLast_update(recordResponse.getLast_update());
-                                roomDetailResponse.setUser_name(recordResponse.getUser_name());
-                                intent.putExtra("roomDetail", roomDetailResponse);
+                                intent.putExtra("audioList", (ArrayList) recordResponse.getAudio_list());
+                                intent.putExtra("audio", recordResponse.getAudio_list().get(position));
+                                intent.putExtra("roomDetail", recordResponse.getRoom_detail());
                                 mRootView.launchActivity(intent);
                             });
                             mRootView.setAdapter(mHistoryAdapter);

@@ -78,7 +78,7 @@ public class BangActivity extends BaseActivity<BangPresenter> implements BangCon
                             if (response.isStatus()) {
 
                                 mFragmentList.add(AllBangFragment.newInstance((ArrayList) response.getData().getNormal()));
-                                mFragmentList.add(HostBangFragment.newInstance((ArrayList) response.getData().getGift()));
+                                mFragmentList.add(HostBangFragment.newInstance());
                                 adapter = new BangAdapter(getSupportFragmentManager(), mFragmentList);
                                 viewPager.setAdapter(adapter);
                                 tabLayout.setupWithViewPager(viewPager);
