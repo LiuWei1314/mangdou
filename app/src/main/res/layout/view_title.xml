@@ -35,7 +35,6 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/x26"
-        android:src="@mipmap/ic_share"
         android:visibility="gone" />
 
     <TextView

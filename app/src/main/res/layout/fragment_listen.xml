@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/y45"
+        android:layout_marginTop="@dimen/y20"
         android:orientation="horizontal">
 
         <TextView
@@ -42,7 +42,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/y38"
+        android:layout_marginTop="@dimen/y20"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -58,8 +58,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/y12"
-                android:drawablePadding="12dp"
                 android:drawableTop="@mipmap/ic_listen_donwload"
+                android:drawablePadding="12dp"
                 android:gravity="center_horizontal"
                 android:text="@string/download"
                 android:textColor="@color/text6d"
@@ -87,8 +87,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/y12"
-                android:drawablePadding="12dp"
                 android:drawableTop="@mipmap/ic_history"
+                android:drawablePadding="12dp"
                 android:gravity="center_horizontal"
                 android:text="@string/history"
                 android:textColor="@color/text6d"
@@ -116,8 +116,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/y12"
-                android:drawablePadding="12dp"
                 android:drawableTop="@mipmap/ic_listen_buy"
+                android:drawablePadding="12dp"
                 android:gravity="center_horizontal"
                 android:text="@string/buy"
                 android:textColor="@color/text6d"
@@ -138,7 +138,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/x14"
-        android:layout_marginTop="@dimen/y52"
+        android:layout_marginTop="@dimen/y20"
+        android:layout_marginBottom="@dimen/y8"
         android:text="我的订阅"
         android:textColor="@color/main_text_selected"
         android:textSize="@dimen/text_size18" />
@@ -146,6 +147,5 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/x14" />
+        android:layout_height="match_parent" />
 </LinearLayout>
