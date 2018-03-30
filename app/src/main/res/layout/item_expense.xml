@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/x14"
+    android:paddingTop="@dimen/y19"
+    android:paddingRight="@dimen/x14"
+    android:paddingBottom="@dimen/y19">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text03"
+        android:textSize="@dimen/text_size14"
+        tools:text="买了个鸡" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y10"
+        android:textColor="@color/text99"
+        android:textSize="@dimen/text_size14"
+        tools:text="0.03忙豆" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y10"
+        android:textColor="@color/text99"
+        android:textSize="@dimen/text_size12"
+        tools:text="2018-03-20 21:48:06" />
+</LinearLayout>
