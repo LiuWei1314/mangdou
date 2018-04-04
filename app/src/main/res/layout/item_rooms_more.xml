@@ -4,8 +4,8 @@
     android:id="@+id/ll"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/y20"
     android:layout_marginTop="@dimen/y20"
+    android:layout_marginBottom="@dimen/y20"
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:paddingLeft="@dimen/x14"
@@ -21,9 +21,9 @@
 
     <ImageView
         android:id="@+id/iv_img"
-        android:layout_width="@dimen/x58"
-        android:layout_height="@dimen/y58"
-        android:layout_marginLeft="@dimen/x21" />
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="21dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,8 +43,8 @@
             android:id="@+id/tv_menu2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/y4"
             android:layout_marginTop="@dimen/y4"
+            android:layout_marginBottom="@dimen/y4"
             android:textColor="@color/text99"
             android:textSize="@dimen/text_size12"
             tools:text="啦啦啦" />

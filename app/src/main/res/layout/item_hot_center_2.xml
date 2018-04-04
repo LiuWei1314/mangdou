@@ -10,13 +10,14 @@
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:paddingLeft="@dimen/x14"
-    android:paddingTop="@dimen/y20"
-    android:paddingRight="@dimen/x14">
+    android:paddingTop="@dimen/y10"
+    android:paddingRight="@dimen/x14"
+    android:paddingBottom="@dimen/y10">
 
     <ImageView
         android:id="@+id/iv_img"
-        android:layout_width="@dimen/x58"
-        android:layout_height="@dimen/y58" />
+        android:layout_width="58dp"
+        android:layout_height="58dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"

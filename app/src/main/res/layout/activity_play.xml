@@ -8,150 +8,151 @@
 
     <include layout="@layout/view_title" />
 
-    <com.zhy.autolayout.AutoFrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/iv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop" />
-
-        <ImageView
-            android:id="@+id/iv_reward"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|center_vertical"
-            android:src="@mipmap/ic_reward" />
-
-        <ImageView
-            android:id="@+id/iv_gift"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|bottom"
-            android:layout_marginRight="@dimen/x15"
-            android:layout_marginBottom="@dimen/y30"
-            android:src="@mipmap/ic_gift" />
-    </com.zhy.autolayout.AutoFrameLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/y15"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/x16"
-        android:paddingRight="@dimen/x16">
-
-        <TextView
-            android:id="@+id/tv_current_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00:00"
-            android:textSize="@dimen/text_size14" />
-
-        <SeekBar
-            android:id="@+id/sb_progress"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:maxHeight="2dp"
-            android:minHeight="2dp"
-            android:progressDrawable="@drawable/seek_bar_progress_style"
-            android:thumb="@mipmap/ic_seek_bar_progress_btn_3" />
-
-        <TextView
-            android:id="@+id/tv_total_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="00:00"
-            android:textSize="@dimen/text_size14" />
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/y15"
-        android:layout_marginBottom="@dimen/y10">
-
-        <ImageView
-            android:id="@+id/iv_mode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/iv_fast_pre"
-            android:src="@drawable/play_mode_level_list" />
-
-        <ImageView
-            android:id="@+id/iv_fast_pre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/iv_pre"
-            android:padding="@dimen/x15"
-            android:src="@mipmap/ic_fast_pre" />
-
-        <ImageView
-            android:id="@+id/iv_pre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/iv_play"
-            android:padding="@dimen/x15"
-            android:src="@mipmap/ic_up" />
-
-        <ImageView
-            android:id="@+id/iv_play"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/x10"
-            android:layout_marginRight="@dimen/x10"
-            android:src="@mipmap/ic_home_play" />
-
-        <ImageView
-            android:id="@+id/iv_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/iv_play"
-            android:padding="@dimen/x15"
-            android:src="@mipmap/ic_next" />
-
-        <ImageView
-            android:id="@+id/iv_fast_next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/iv_next"
-            android:padding="@dimen/x15"
-            android:src="@mipmap/ic_fast_next" />
-
-    </RelativeLayout>
-
     <com.p609915198.basemodule.widget.autolayout.AutoScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <com.zhy.autolayout.AutoFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/iv_reward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@mipmap/ic_reward" />
+
+                <ImageView
+                    android:id="@+id/iv_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginRight="@dimen/x15"
+                    android:layout_marginBottom="@dimen/y30"
+                    android:src="@mipmap/ic_gift" />
+            </com.zhy.autolayout.AutoFrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y15"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/x16"
+                android:paddingRight="@dimen/x16">
+
+                <TextView
+                    android:id="@+id/tv_current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textSize="@dimen/text_size14" />
+
+                <SeekBar
+                    android:id="@+id/sb_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxHeight="2dp"
+                    android:minHeight="2dp"
+                    android:progressDrawable="@drawable/seek_bar_progress_style"
+                    android:thumb="@mipmap/ic_seek_bar_progress_btn_3" />
+
+                <TextView
+                    android:id="@+id/tv_total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textSize="@dimen/text_size14" />
+            </LinearLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/y15"
-                android:layout_marginBottom="@dimen/y15"
-                android:paddingLeft="@dimen/x10"
-                android:paddingRight="@dimen/x10">
+                android:layout_marginBottom="@dimen/y10">
+
+                <ImageView
+                    android:id="@+id/iv_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_fast_pre"
+                    android:src="@drawable/play_mode_level_list" />
+
+                <ImageView
+                    android:id="@+id/iv_fast_pre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_pre"
+                    android:padding="@dimen/x15"
+                    android:src="@mipmap/ic_fast_pre" />
+
+                <ImageView
+                    android:id="@+id/iv_pre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_play"
+                    android:padding="@dimen/x15"
+                    android:src="@mipmap/ic_up" />
+
+                <ImageView
+                    android:id="@+id/iv_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_marginRight="@dimen/x10"
+                    android:src="@mipmap/ic_home_play" />
+
+                <ImageView
+                    android:id="@+id/iv_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_play"
+                    android:padding="@dimen/x15"
+                    android:src="@mipmap/ic_next" />
+
+                <ImageView
+                    android:id="@+id/iv_fast_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_next"
+                    android:padding="@dimen/x15"
+                    android:src="@mipmap/ic_fast_next" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
 
                 <com.p609915198.basemodule.widget.CircleImageView
                     android:id="@+id/civ_head"
-                    android:layout_width="@dimen/x34"
-                    android:layout_height="@dimen/y34"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
                     android:layout_centerVertical="true" />
 
                 <TextView
@@ -159,6 +160,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/x14"
+                    android:layout_marginTop="@dimen/y10"
                     android:layout_toRightOf="@+id/civ_head"
                     android:textColor="@color/text33"
                     android:textSize="@dimen/text_size14"
@@ -178,13 +180,15 @@
 
                 <TextView
                     android:id="@+id/tv_subscribe"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/x55"
+                    android:layout_height="@dimen/y24"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
+                    android:background="@drawable/shape_item_already_buy_comments"
+                    android:gravity="center"
                     android:text="关注"
-                    android:textColor="@color/main_text_selected"
-                    android:textSize="@dimen/text_size10" />
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size12" />
             </RelativeLayout>
 
             <TextView
@@ -197,22 +201,6 @@
                 android:textSize="@dimen/text_size18"
                 tools:text="朴树-1 声音日记之音乐赏析" />
 
-            <!--<LinearLayout-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginBottom="@dimen/y8"-->
-            <!--android:layout_marginLeft="@dimen/x14"-->
-            <!--android:layout_marginTop="@dimen/y8"-->
-            <!--android:orientation="horizontal">-->
-
-            <!--<TextView-->
-            <!--android:id="@+id/tv_play_num"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:textColor="@color/text99"-->
-            <!--android:textSize="@dimen/text_size10"-->
-            <!--tools:text="2.9万次播放" />-->
-
             <TextView
                 android:id="@+id/tv_play_time"
                 android:layout_width="wrap_content"
@@ -223,13 +211,57 @@
                 android:textColor="@color/text99"
                 android:textSize="@dimen/text_size10"
                 tools:text="2015-01-14" />
-            <!--</LinearLayout>-->
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/y1"
                 android:background="@color/line" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_common"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
         </LinearLayout>
     </com.p609915198.basemodule.widget.autolayout.AutoScrollView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y50"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_comments"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/y30"
+            android:layout_marginLeft="@dimen/x14"
+            android:layout_marginRight="@dimen/x14"
+            android:layout_weight="1"
+            android:background="@drawable/shape_edit_text"
+            android:focusedByDefault="false"
+            android:hint="评论/向主播提问"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColorHint="@color/text99"
+            android:textSize="@dimen/text_size16"
+            tools:text="啦啦啦啦" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/y35"
+            android:layout_marginRight="@dimen/x14"
+            android:background="@drawable/shape_item_already_buy_comments"
+            android:text="评论"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size14" />
+    </LinearLayout>
 </LinearLayout>
