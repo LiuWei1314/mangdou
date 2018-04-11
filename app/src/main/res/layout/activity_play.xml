@@ -139,6 +139,14 @@
                     android:padding="@dimen/x15"
                     android:src="@mipmap/ic_fast_next" />
 
+                <ImageView
+                    android:id="@+id/iv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_fast_next"
+                    android:src="@mipmap/ic_time" />
+
             </RelativeLayout>
 
             <RelativeLayout

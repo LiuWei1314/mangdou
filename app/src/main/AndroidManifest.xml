@@ -215,6 +215,10 @@
             android:name="com.p609915198.fwb.mvp.ui.activity.RechargeActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.p609915198.fwb.mvp.ui.activity.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
 
 
         <!-- 微信支付 -->
