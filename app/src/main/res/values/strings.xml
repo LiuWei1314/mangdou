@@ -53,6 +53,12 @@
     <string name="search">搜索</string>
     <string name="about_us">我们是忙豆听书，听刘忙的作品，来忙豆听书！这里有丰富的有声作品。欢迎你的到来和支持！刘忙个人微信号：shoushuliumang（说书刘忙全拼）有其他刘忙微信好友，请不要重复添加，谢谢！忙豆听书QQ：396828858有任何APP问题，可首选加我微信号。找（刘忙）交流。</string>
 
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unsupported">不支持错误</string>
+    <string name="errcode_unknown">发送返回</string>
+
     <string-array name="timer_text">
         <item>不开启</item>
         <item>播完当前声音</item>
@@ -71,6 +77,7 @@
         <item>-1</item>
         <item>-2</item>
         <item>-3</item>
+        <item>10</item>
         <item>20</item>
         <item>30</item>
         <item>40</item>

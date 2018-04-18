@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y50"
+    android:layout_marginBottom="@dimen/y10"
+    android:layout_marginLeft="@dimen/x14"
+    android:layout_marginRight="@dimen/x8"
+    android:layout_marginTop="@dimen/y10"
+    android:background="@drawable/selector_recharge"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="6元"
+        android:textColor="@color/text33"
+        android:textSize="@dimen/text_size18" />
+
+    <TextView
+        android:id="@+id/tv_mangdou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y4"
+        android:gravity="center"
+        android:text="6元"
+        android:textColor="@color/text99"
+        android:textSize="@dimen/text_size12" />
+</LinearLayout>
