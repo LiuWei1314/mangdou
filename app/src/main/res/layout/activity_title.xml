@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -60,8 +61,8 @@
         android:background="#EABF6A"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingTop="@dimen/y30"
-        android:paddingBottom="@dimen/y30">
+        android:paddingBottom="@dimen/y30"
+        android:paddingTop="@dimen/y30">
 
         <com.p609915198.basemodule.widget.CircleImageView
             android:id="@+id/civ_head"
@@ -98,6 +99,27 @@
             android:visibility="gone" />
     </LinearLayout>
 
+    <Button
+        android:id="@+id/bt_recharge"
+        android:layout_width="@dimen/x100"
+        android:layout_height="@dimen/y35"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y20"
+        android:background="@drawable/shape_recharge_bt"
+        android:text="立即充值"
+        android:textColor="#95690D"
+        android:textSize="@dimen/text_size16" />
+
+    <TextView
+        android:id="@+id/tv_consume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y10"
+        android:textColor="#95690D"
+        android:textSize="@dimen/text_size12"
+        tools:text="已消费100忙豆" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -111,8 +133,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/x16"
-        android:layout_marginTop="@dimen/y20"
         android:layout_marginRight="@dimen/x16"
+        android:layout_marginTop="@dimen/y20"
         android:orientation="horizontal">
 
         <TextView
@@ -166,10 +188,10 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/y10"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="@dimen/x16"
-        android:layout_marginTop="@dimen/y10"
-        android:layout_marginRight="@dimen/x16"
         android:layout_marginBottom="@dimen/y10"
+        android:layout_marginLeft="@dimen/x16"
+        android:layout_marginRight="@dimen/x16"
+        android:layout_marginTop="@dimen/y10"
         android:max="1888"
         android:progress="0"
         android:progressDrawable="@drawable/progressbar" />
@@ -239,12 +261,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/x16"
-        android:layout_marginTop="@dimen/y17"
         android:layout_marginRight="@dimen/x16"
+        android:layout_marginTop="@dimen/y17"
         android:background="#FCF7EB"
         android:orientation="vertical"
-        android:paddingTop="@dimen/y14"
-        android:paddingBottom="@dimen/y14">
+        android:paddingBottom="@dimen/y14"
+        android:paddingTop="@dimen/y14">
 
         <LinearLayout
             android:layout_width="match_parent"

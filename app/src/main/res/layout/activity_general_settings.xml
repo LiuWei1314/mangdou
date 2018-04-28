@@ -16,10 +16,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@mipmap/ic_more"
-            android:paddingLeft="@dimen/x20"
-            android:paddingTop="@dimen/y19"
-            android:paddingRight="@dimen/x20"
             android:paddingBottom="@dimen/y19"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/y19"
             android:text="定时关闭"
             android:textColor="@color/text33"
             android:textSize="@dimen/text_size14" />
@@ -36,10 +36,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@mipmap/ic_more"
-            android:paddingLeft="@dimen/x20"
-            android:paddingTop="@dimen/y19"
-            android:paddingRight="@dimen/x20"
             android:paddingBottom="@dimen/y19"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/y19"
             android:text="帐号绑定"
             android:textColor="@color/text33"
             android:textSize="@dimen/text_size14" />
@@ -60,10 +60,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:paddingLeft="@dimen/x20"
-                android:paddingTop="@dimen/y19"
-                android:paddingRight="@dimen/x20"
                 android:paddingBottom="@dimen/y19"
+                android:paddingLeft="@dimen/x20"
+                android:paddingRight="@dimen/x20"
+                android:paddingTop="@dimen/y19"
                 android:text="断点续听"
                 android:textColor="@color/text33"
                 android:textSize="@dimen/text_size14" />
@@ -76,37 +76,30 @@
                 android:layout_centerVertical="true" />
         </RelativeLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/y1"
-            android:layout_marginLeft="@dimen/x10"
-            android:layout_marginRight="@dimen/x10"
-            android:background="@color/lineDD" />
+        <!-- <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
 
-       <!-- <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+             <TextView
+                 android:id="@+id/tv_2g_download"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_centerVertical="true"
+                 android:paddingLeft="@dimen/x20"
+                 android:paddingTop="@dimen/y19"
+                 android:paddingRight="@dimen/x20"
+                 android:paddingBottom="@dimen/y19"
+                 android:text="2G/3G/4G播放和下载"
+                 android:textColor="@color/text33"
+                 android:textSize="@dimen/text_size14" />
 
-            <TextView
-                android:id="@+id/tv_2g_download"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:paddingLeft="@dimen/x20"
-                android:paddingTop="@dimen/y19"
-                android:paddingRight="@dimen/x20"
-                android:paddingBottom="@dimen/y19"
-                android:text="2G/3G/4G播放和下载"
-                android:textColor="@color/text33"
-                android:textSize="@dimen/text_size14" />
-
-            <Switch
-                android:id="@+id/switch_2g_download"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true" />
-        </RelativeLayout>-->
+             <Switch
+                 android:id="@+id/switch_2g_download"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true" />
+         </RelativeLayout>-->
 
         <View
             android:layout_width="match_parent"
@@ -120,10 +113,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@mipmap/ic_more"
-            android:paddingLeft="@dimen/x20"
-            android:paddingTop="@dimen/y19"
-            android:paddingRight="@dimen/x20"
             android:paddingBottom="@dimen/y19"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/y19"
             android:text="清理占用空间"
             android:textColor="@color/text33"
             android:textSize="@dimen/text_size14" />
@@ -140,10 +133,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@mipmap/ic_more"
-            android:paddingLeft="@dimen/x20"
-            android:paddingTop="@dimen/y19"
-            android:paddingRight="@dimen/x20"
             android:paddingBottom="@dimen/y19"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/y19"
             android:text="版本介绍"
             android:textColor="@color/text33"
             android:textSize="@dimen/text_size14" />
@@ -160,10 +153,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableRight="@mipmap/ic_more"
-            android:paddingLeft="@dimen/x20"
-            android:paddingTop="@dimen/y19"
-            android:paddingRight="@dimen/x20"
             android:paddingBottom="@dimen/y19"
+            android:paddingLeft="@dimen/x20"
+            android:paddingRight="@dimen/x20"
+            android:paddingTop="@dimen/y19"
             android:text="关于"
             android:textColor="@color/text33"
             android:textSize="@dimen/text_size14" />
@@ -181,9 +174,9 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/y40"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/y30"
         android:layout_marginLeft="@dimen/x10"
         android:layout_marginRight="@dimen/x10"
-        android:layout_marginBottom="@dimen/y30"
         android:background="@drawable/shape_item_already_buy_comments"
         android:text="登录"
         android:textColor="@color/white"
