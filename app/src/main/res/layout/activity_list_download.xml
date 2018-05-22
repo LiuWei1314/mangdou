@@ -11,10 +11,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/y18"
         android:paddingLeft="@dimen/x16"
-        android:paddingTop="@dimen/y18"
         android:paddingRight="@dimen/x16"
-        android:paddingBottom="@dimen/y18">
+        android:paddingTop="@dimen/y18">
 
         <TextView
             android:id="@+id/tv_total_num"
@@ -32,8 +32,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_gravity="right"
-            android:drawableRight="@mipmap/ic_choose_blues"
             android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/ic_choose_blues"
             android:text="选集(1~20)"
             android:textColor="@color/text99"
             android:textSize="@dimen/text_size14" />
@@ -69,9 +69,10 @@
             android:id="@+id/tv_download"
             android:layout_width="@dimen/x162"
             android:layout_height="@dimen/y32"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/y14"
             android:layout_marginLeft="@dimen/x20"
             android:layout_marginTop="@dimen/y14"
-            android:layout_marginBottom="@dimen/y14"
             android:background="@drawable/shape_column_subcribe"
             android:gravity="center"
             android:text="立即下载"
