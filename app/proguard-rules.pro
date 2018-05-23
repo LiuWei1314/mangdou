@@ -295,3 +295,15 @@ public static java.lang.String TABLENAME;
 -keep class com.ut.device.** { *;}
 ###微博
 -keep class com.sina.weibo.sdk.** { *; }
+
+
+-dontwarn com.arialyy.aria.**
+-keep class com.arialyy.aria.**{*;}
+-keep class **$$DownloadListenerProxy{ *; }
+-keep class **$$UploadListenerProxy{ *; }
+-keep class **$$DownloadGroupListenerProxy{ *; }
+-keepclasseswithmembernames class * {
+    @Download.* <methods>;
+    @Upload.* <methods>;
+    @DownloadGroup.* <methods>;
+}

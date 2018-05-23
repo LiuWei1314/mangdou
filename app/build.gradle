@@ -81,5 +81,6 @@ dependencies {
     testImplementation rootProject.ext.dependencies["junit"]
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
     annotationProcessor(rootProject.ext.dependencies["dagger2-compiler"])
+    annotationProcessor 'com.arialyy.aria:aria-compiler:3.4'
     api project(':basemodule')
 }

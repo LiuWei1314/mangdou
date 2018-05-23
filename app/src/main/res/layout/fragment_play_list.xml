@@ -18,23 +18,32 @@
             android:textSize="@dimen/text_size12"
             tools:text="共(20级)" />
 
+      <!--  <TextView
+            android:id="@+id/tv_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_toLeftOf="@+id/tv_list_download"
+            android:text="选集"
+            android:textColor="@color/text33"
+            android:textSize="@dimen/text_size12" />-->
+
         <TextView
             android:id="@+id/tv_list_download"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_toLeftOf="@+id/tv_buy"
             android:text="批量下载"
             android:textColor="@color/text33"
             android:textSize="@dimen/text_size12" />
 
         <TextView
-            android:id="@+id/tv_choose"
+            android:id="@+id/tv_buy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/x100"
-            android:layout_toLeftOf="@+id/tv_list_download"
-            android:text="选集"
+            android:text="批量购买"
             android:textColor="@color/text33"
             android:textSize="@dimen/text_size12" />
     </RelativeLayout>

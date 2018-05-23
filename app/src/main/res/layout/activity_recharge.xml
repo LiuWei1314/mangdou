@@ -8,6 +8,8 @@
 
     <include layout="@layout/view_title" />
 
+    <include layout="@layout/view_ad_header" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
