@@ -1,5 +1,6 @@
 package com.p609915198.fwb.mvp.ui.activity;
 
+import android.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -95,14 +96,20 @@ public class MyDownloadActivity extends BaseActivity<MyDownloadPresenter> implem
                 mAdapter.notifyDataSetChanged();
                 break;
             case R.id.tv_all_clean:
-                if (null != Aria.download(this).getTaskList()) {
-                    for (DownloadEntity entity : Aria.download(this).getTaskList()) {
-                        Aria.download(this).load(entity.getUrl()).removeRecord();
-                    }
+                if (null != Aria.download(this).getTaskList() && !Aria.download(this).getTaskList().isEmpty()) {
+                    new AlertDialog.Builder(this)
+                            .setTitle("确认删除所有音频？")
+                            .setPositiveButton("确定", (dialogInterface, i) -> {
+                                for (DownloadEntity entity : Aria.download(this).getTaskList()) {
+                                    Aria.download(this).load(entity.getUrl()).removeRecord();
+                                }
+                                Aria.download(this).removeAllTask(true);
+                                mAudioList.clear();
+                                mAdapter.notifyDataSetChanged();
+                            })
+                            .setNegativeButton("取消", (dialogInterface, i) -> dialogInterface.dismiss())
+                            .show();
                 }
-                Aria.download(this).removeAllTask(true);
-                mAudioList.clear();
-                mAdapter.notifyDataSetChanged();
                 break;
         }
     }

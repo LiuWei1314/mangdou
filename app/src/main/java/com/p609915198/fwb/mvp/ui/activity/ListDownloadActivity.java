@@ -1,5 +1,6 @@
 package com.p609915198.fwb.mvp.ui.activity;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -82,6 +83,8 @@ public class ListDownloadActivity extends BaseActivity<ListDownloadPresenter> im
     public void initData() {
         tvCenter.setText("批量下载");
         tvCenter.setVisibility(View.VISIBLE);
+        tvRight.setText("查看下载");
+        tvRight.setVisibility(View.VISIBLE);
 
         RxCompoundButton.checkedChanges(cbChooseAll).subscribe(aBoolean -> {
             if (null != mAdapter2) {
@@ -152,7 +155,7 @@ public class ListDownloadActivity extends BaseActivity<ListDownloadPresenter> im
             ));
     }
 
-    @OnClick({R.id.tv_left, R.id.tv_download, R.id.tv_choose})
+    @OnClick({R.id.tv_left, R.id.tv_download, R.id.tv_choose, R.id.tv_right})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_left:
@@ -167,6 +170,9 @@ public class ListDownloadActivity extends BaseActivity<ListDownloadPresenter> im
                 } else {
                     rv1.setVisibility(View.GONE);
                 }
+                break;
+            case R.id.tv_right:
+                launchActivity(new Intent(this, MyDownloadActivity.class));
                 break;
         }
     }

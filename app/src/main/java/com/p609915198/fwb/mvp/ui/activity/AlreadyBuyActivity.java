@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.p609915198.basemodule.base.BaseActivity;
 import com.p609915198.basemodule.di.component.BaseComponent;
 import com.p609915198.fwb.R;
