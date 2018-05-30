@@ -43,11 +43,11 @@
             android:name=".mvp.ui.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-            <intent-filter>
+          <!--  <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity android:name=".mvp.ui.activity.TestActivity">
 
@@ -67,7 +67,13 @@
         <activity
             android:name=".mvp.ui.activity.LoginActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <!--  <intent-filter>
+              <action android:name="android.intent.action.MAIN" />
+
+              <category android:name="android.intent.category.LAUNCHER" />
+          </intent-filter>-->
+        </activity>
         <activity
             android:name=".mvp.ui.activity.VoiceActivity"
             android:screenOrientation="portrait"
@@ -131,7 +137,13 @@
         <activity
             android:name=".mvp.ui.activity.SearchActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" />
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".mvp.ui.activity.HistoryActivity"
             android:screenOrientation="portrait"

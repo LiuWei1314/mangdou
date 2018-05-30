@@ -30,6 +30,7 @@
             android:layout_alignParentRight="true"
             android:drawablePadding="10dp"
             android:drawableRight="@mipmap/ic_more"
+            android:gravity="center"
             android:textColor="@color/text33"
             android:textSize="@dimen/text_size14"
             tools:text="3.4M" />
@@ -58,6 +59,7 @@
             android:layout_alignParentRight="true"
             android:drawablePadding="10dp"
             android:drawableRight="@mipmap/ic_more"
+            android:gravity="center"
             android:textColor="@color/text33"
             android:textSize="@dimen/text_size14"
             tools:text="3.4M" />

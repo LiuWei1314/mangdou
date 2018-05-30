@@ -6,7 +6,60 @@
     android:background="@color/white"
     android:orientation="vertical">
 
-    <include layout="@layout/view_title" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/y40"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/ic_back"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/x20"
+            android:text="返回"
+            android:textColor="@color/text03"
+            android:textSize="@dimen/text_size16" />
+
+        <TextView
+            android:id="@+id/tv_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="头部"
+            android:textColor="@color/text03"
+            android:textSize="@dimen/text_size16"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="@dimen/x19"
+            android:layout_height="@dimen/y19"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x26"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x26"
+            android:textColor="@color/text99"
+            android:textSize="@dimen/text_size12" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y1"
+            android:layout_alignBottom="@id/tv_left"
+            android:background="@color/lineDD" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
