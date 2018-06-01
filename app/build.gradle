@@ -26,10 +26,10 @@ android {
 
     signingConfigs {
         release {
-            storeFile file(System.properties['debugStoreFile'])
-            storePassword System.properties['debugStorePassword']
-            keyAlias System.properties['debugKeyAlias']
-            keyPassword System.properties['debugKeyPassword']
+            storeFile file(System.properties['releaseStoreFile'])
+            storePassword System.properties['releaseStorePassword']
+            keyAlias System.properties['releaseKeyAlias']
+            keyPassword System.properties['releaseKeyPassword']
         }
     }
 
@@ -37,12 +37,14 @@ android {
         debug {
             // debug log 打印配置
             buildConfigField "boolean", "LOG_DEBUG", "true"
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
         }
 
         release {
             // debug log 打印配置
-            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "LOG_DEBUG", "false"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
@@ -73,6 +75,8 @@ dependencies {
     // 进度条
     implementation 'com.liulishuo.magicprogresswidget:library:1.0.9'
     implementation 'me.shaohui:bottomdialog:1.1.9'
+
+    implementation 'com.zhy:okhttputils:2.6.2'
 
     implementation rootProject.ext.dependencies["baseAdapter"]
     implementation rootProject.ext.dependencies["glide"]
