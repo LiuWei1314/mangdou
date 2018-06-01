@@ -43,11 +43,14 @@
             android:name=".mvp.ui.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-          <!--  <intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity android:name=".mvp.ui.activity.TestActivity">
 
@@ -67,12 +70,15 @@
         <activity
             android:name=".mvp.ui.activity.LoginActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
-            <!--  <intent-filter>
+            android:windowSoftInputMode="stateAlwaysHidden">
+
+            <!--
+          <intent-filter>
               <action android:name="android.intent.action.MAIN" />
 
               <category android:name="android.intent.category.LAUNCHER" />
-          </intent-filter>-->
+          </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".mvp.ui.activity.VoiceActivity"
@@ -137,7 +143,7 @@
         <activity
             android:name=".mvp.ui.activity.SearchActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden" >
+            android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -232,6 +238,15 @@
             android:name=".mvp.ui.activity.UserInfoActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.ui.activity.ListBuyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".mvp.ui.activity.SearchResultActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
         <!-- 微信支付 -->
         <activity
             android:name=".wxapi.WXEntryActivity"
@@ -283,9 +298,5 @@
                 <action android:name="com.p609915198.fwb.app.STATUS_BAR_ACTIONS" />
             </intent-filter>
         </receiver>
-
-        <activity android:name=".mvp.ui.activity.Test2Activity" />
-        <activity android:name=".mvp.ui.activity.ListBuyActivity" />
     </application>
-
 </manifest>

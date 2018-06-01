@@ -116,10 +116,15 @@
         android:background="@color/white"
         zhy:max_select="-1" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/y1"
-        android:background="@color/line" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y10"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginTop="@dimen/y30"
+        android:text="搜索记录"
+        android:textColor="#929292"
+        android:textSize="@dimen/text_size14" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv"
