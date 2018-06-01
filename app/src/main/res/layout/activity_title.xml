@@ -135,12 +135,14 @@
         android:layout_marginLeft="@dimen/x16"
         android:layout_marginRight="@dimen/x16"
         android:layout_marginTop="@dimen/y20"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.094"
+            android:gravity="right"
             android:text="铁"
             android:textColor="@color/text66"
             android:textSize="@dimen/text_size12" />
@@ -148,8 +150,8 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_weight="0.239"
+            android:gravity="right"
             android:text="铜"
             android:textColor="@color/text66"
             android:textSize="@dimen/text_size12" />
@@ -157,8 +159,8 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_weight="0.1665"
+            android:gravity="right"
             android:text="银"
             android:textColor="@color/text66"
             android:textSize="@dimen/text_size12" />
@@ -166,8 +168,8 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_weight="0.1575"
+            android:gravity="right"
             android:text="金"
             android:textColor="@color/text66"
             android:textSize="@dimen/text_size12" />
@@ -175,7 +177,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.287"
             android:gravity="right"
             android:text="钻"
             android:textColor="@color/text66"
