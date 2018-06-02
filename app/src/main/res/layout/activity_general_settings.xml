@@ -42,7 +42,8 @@
             android:paddingTop="@dimen/y19"
             android:text="帐号绑定"
             android:textColor="@color/text33"
-            android:textSize="@dimen/text_size14" />
+            android:textSize="@dimen/text_size14"
+            android:visibility="gone" />
 
         <View
             android:layout_width="match_parent"
