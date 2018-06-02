@@ -194,7 +194,7 @@
         android:layout_marginLeft="@dimen/x16"
         android:layout_marginRight="@dimen/x16"
         android:layout_marginTop="@dimen/y10"
-        android:max="1888"
+        android:max="2000"
         android:progress="0"
         android:progressDrawable="@drawable/progressbar" />
 
@@ -203,50 +203,52 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/x16"
         android:layout_marginRight="@dimen/x16"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="1">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="188"
-            android:textColor="@color/text99"
-            android:textSize="@dimen/text_size12" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="666"
-            android:textColor="@color/text99"
-            android:textSize="@dimen/text_size12" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="999"
-            android:textColor="@color/text99"
-            android:textSize="@dimen/text_size12" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="1314"
-            android:textColor="@color/text99"
-            android:textSize="@dimen/text_size12" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.094"
             android:gravity="right"
-            android:text="1888"
-            android:textColor="@color/text99"
+            android:text="188"
+            android:textColor="@color/text66"
+            android:textSize="@dimen/text_size12" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.239"
+            android:gravity="right"
+            android:text="666"
+            android:textColor="@color/text66"
+            android:textSize="@dimen/text_size12" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1665"
+            android:gravity="right"
+            android:text="999"
+            android:textColor="@color/text66"
+            android:textSize="@dimen/text_size12" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1575"
+            android:gravity="right"
+            android:text="1314"
+            android:textColor="@color/text66"
+            android:textSize="@dimen/text_size12" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.287"
+            android:gravity="right"
+            android:text="1999"
+            android:textColor="@color/text66"
             android:textSize="@dimen/text_size12" />
     </LinearLayout>
 
