@@ -50,6 +50,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".mvp.ui.activity.TestActivity">
+
             <!--
                 <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,11 +68,14 @@
             android:name=".mvp.ui.activity.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-           <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".mvp.ui.activity.VoiceActivity"
@@ -137,11 +141,14 @@
             android:name=".mvp.ui.activity.SearchActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden">
-           <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity
             android:name=".mvp.ui.activity.HistoryActivity"
@@ -283,5 +290,8 @@
                 <action android:name="com.p609915198.fwb.app.STATUS_BAR_ACTIONS" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".mvp.ui.activity.ChooseActivity" />
     </application>
+
 </manifest>
